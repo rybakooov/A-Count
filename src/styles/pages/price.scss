@@ -1,0 +1,180 @@
+.PriceHead{
+  padding-top: 120px;
+  padding-bottom: 80px;
+  &__Title{
+    @extend %h1;
+    color: var(--black);
+    margin-bottom: 40px;
+  }
+  &-Tabs{
+    display: flex;
+    &__Tab{
+      @extend %tabBtn;
+      &:not(:last-child){
+        margin-right: 16px;
+      }
+      &_active{
+        @extend %tabBtnActive;
+      }
+    }
+  }
+}
+
+.PriceTable{
+  background-color: var(--light-blue);
+  padding: 16px 0 40px;
+  .container{
+    position: relative;
+  }
+  &-Item{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 'L L L R R R R R R R R R';
+    gap: 16px;
+    &:not(:last-child){
+      margin-bottom: 32px;
+    }
+    &:nth-child(2){
+      margin-top: -73px;
+    }
+    &:not(:nth-child(2)){
+      .PriceTable-Content-HeadRow{
+        border-bottom: 1px solid var(--mid-light-gray);
+      }
+    }
+  }
+  &-Aside{
+    grid-area: L;
+    position: relative;
+    &__Head{
+      @extend %text;
+      position: sticky;
+      top: 68px;
+      background-color: var(--light-blue);
+      padding-bottom: 24px;
+      padding-top: 24px;
+      border-bottom: 1px solid var(--mid-light-gray);
+    }
+    &__El{
+      height: 70px;
+      display: flex;
+      align-items: center;
+      @extend %small-text-wide;
+      color: var(--dark-gray);
+      border-bottom: 1px solid transparent;
+      transition: .3s;
+      &_hide{
+        height: 0;
+        overflow: hidden;
+      }
+    }
+  }
+  &-Content{
+    grid-area: R;
+    &-Row, &-HeadRow{
+      display: flex;
+      &__El{
+        flex: 1;
+        border-bottom: 1px solid var(--mid-light-gray);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:not(:last-child){
+          margin-right: 16px;
+        }
+      }
+    }
+    &-HeadRow{
+      height: 73px;
+      &:not(:first-child){
+      }
+    }
+    &-Row{
+      &_hide{
+        .PriceTable-Content-Row__El{
+          height: 0;
+          overflow: hidden;
+          border: none;
+        }
+      }
+      &__El{
+        transition: .3s;
+        flex-shrink: 0;
+        flex-grow: 1;
+        svg{
+          margin-top: 4px;
+        }
+        height: 70px;
+      }
+    }
+  }
+
+  &-Heading{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 'L L L R R R R R R R R R';
+    gap: 16px;
+    position: sticky;
+    top: 68px;
+    &-Right{
+      grid-area: R;
+      display: flex;
+      background-color: var(--light-blue);
+      &__El{
+        flex: 1;
+        border-bottom: 1px solid var(--mid-light-gray);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:not(:last-child){
+          margin-right: 16px;
+        }
+        padding-top: 24px;
+        padding-bottom: 24px;
+        @extend %text;
+        font-weight: 600;
+        color: var(--purple);
+      }
+    }
+  }
+}
+
+.PriceDownload{
+  padding-top: 40px;
+  .container {
+    @extend %grid-OneRow;
+  }
+  &__Title{
+    grid-area: L;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
+    color: var(--black);
+  }
+  &-Links{
+    grid-area: R;
+    &__Text{
+      margin-bottom: 24px;
+      @extend %text;
+      color: var(--mid-gray);
+    }
+    &-Row{
+      display: flex;
+      flex-wrap: wrap;
+      margin: -20px;
+    }
+    &__Link{
+      display: flex;
+      align-items: center;
+      margin: 20px;
+      @extend %text;
+      color: var(--mid-gray);
+      svg{
+        margin-right: 8px;
+      }
+      span{
+        color: var(--cherry);
+      }
+    }
+  }
+}

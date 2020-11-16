@@ -1,0 +1,10 @@
+extends ../template
+block title
+  | Контакты | A-count
+block variables
+    - var disableFooter = true
+block content
+  section.notFound
+    .container
+      img(src="assets/images/404.svg" alt="Страница не найдена")
+      a(href="/") Вернуться на главную

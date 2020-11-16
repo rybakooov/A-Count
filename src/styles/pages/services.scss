@@ -1,0 +1,152 @@
+.ServicesSolo{
+  padding: 120px 0;
+  &__Title{
+    @extend %h1;
+    margin-bottom: 24px;
+  }
+  &__Text{
+    @extend %text;
+    color: var(--mid-gray);
+    max-width: 593px;
+    margin-bottom: 80px;
+  }
+  &-Grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1160px;
+    &-Item{
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      height: 240px;
+      border: 1px solid var(--light-gray);
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+      &:before{
+        content: '';
+        position: absolute;
+        transform: translate(-50%, 50%);
+        transform-origin: center;
+        left: 0;
+        bottom: 0;
+        background-color: var(--cherry);
+        display: block;
+        height: 0px;
+        width: 0px;
+        border-radius: 50%;
+        transition: .5s;
+        z-index: 1;
+      }
+      &:hover{
+        .ServicesSolo-Grid-Item__Title{
+          @media screen and (min-width: 1024px){
+            color: #fff;
+          }
+        }
+        .ServicesSolo-Grid-Item-Bottom{
+          &__Price{
+            @media screen and (min-width: 1024px){
+              color: #fff;
+            }
+          }
+          svg{
+            circle{
+              @media screen and (min-width: 1024px){
+                fill: #fff;
+              }
+            }
+            path{
+              @media screen and (min-width: 1024px){
+                stroke: var(--cherry);
+              }
+            }
+          }
+        }
+        &:before{
+          @media screen and (min-width: 1024px){
+            width: 400%;
+            height: 400%;
+          }
+        }
+      }
+      &__Title{
+        @extend %big-text;
+        position: relative;
+        z-index: 2;
+        transition: .5s;
+      }
+      &-Bottom{
+        margin-top: auto;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        z-index: 2;
+        &__Price{
+          @extend %text;
+          color: var(--dark-gray);
+          transition: .2s;
+        }
+        svg{
+          margin-left: auto;
+          path, circle{
+            transition: .5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.servicePage{
+  padding: 40px 0 120px;
+  &-Body{
+    @extend %grid-OneRow;
+    &-Aside{
+      grid-area: L;
+      position: sticky;
+      top: 92px;
+      margin-bottom: auto;
+    }
+    &__Title{
+      @extend %h1;
+      margin-bottom: 40px;
+    }
+    &__Order{
+      @extend %cherry-btn;
+      padding: 13px 28px;
+    }
+    &-Content{
+      grid-area: R;
+      h2, h3, h4, h5, h6{
+        @extend %big-text;
+        margin-top: 40px;
+        margin-bottom: 16px;
+      }
+      ul, ol{
+        margin: 16px 0;
+        padding-left: 17px;
+        max-width: 648px;
+        display: block;
+        li{
+          @extend %text;
+          color: var(--mid-gray);
+          margin: 0;
+          &:not(:last-child){
+            margin-bottom: 16px;
+          }
+        }
+      }
+      p{
+        @extend %text;
+        color: var(--mid-gray);
+        max-width: 648px;
+        &:not(:last-child){
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}

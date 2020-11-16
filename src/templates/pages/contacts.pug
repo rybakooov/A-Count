@@ -1,0 +1,60 @@
+extends ../template
+block title
+  | Контакты | A-count
+block variables
+  - var blueFooter = true
+block content
+  section.Contacts
+    #ContactsMap
+    .container
+      .Contacts-Info
+        h1.Contacts-Info__Title Контакты
+        .Contacts-Info-Tabs
+          button.Contacts-Info-Tabs__Tab.Contacts-Info-Tabs__Tab_active Москва
+          button.Contacts-Info-Tabs__Tab Симферополь
+        .Contacts-Info-Body
+          .Contacts-Info-Body-Block.Contacts-Info-Body-Block_active
+            .Contacts-Info-Body-Item.Contacts-Info-Body-Item_phone
+              p.Contacts-Info-Body-Item__Title Телефоны:
+              .Contacts-Info-Body-Item-Wrap
+                a(href="tel: +7 (499) 189-78-70").Contacts-Info-Body-Item__Text +7 (499) 189-78-70
+                a(href="tel: +7 (499) 189-59-00").Contacts-Info-Body-Item__Text +7 (499) 189-59-00
+                a(href="tel: +7 (499) 760-01-02").Contacts-Info-Body-Item__Text +7 (499) 760-01-02
+                a(href="tel: +7 (499) 760-02-14").Contacts-Info-Body-Item__Text +7 (499) 760-02-14
+            .Contacts-Info-Body-Item
+              p.Contacts-Info-Body-Item__Title E-mail:
+              .Contacts-Info-Body-Item-Wrap
+                a(href="mailto: ryabonenko@a-count.net").Contacts-Info-Body-Item__Text ryabonenko@a-count.net
+            .Contacts-Info-Body-Item
+              p.Contacts-Info-Body-Item__Title Адрес:
+              .Contacts-Info-Body-Item-Wrap
+                p.Contacts-Info-Body-Item__Text 129323 г. Москва, проезд Серебрякова, 3
+            .Contacts-Info-Body-Item
+              p.Contacts-Info-Body-Item__Title Ближайшее метро:
+              .Contacts-Info-Body-Item-Wrap
+                p.Contacts-Info-Body-Item__Text
+                  <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.681 13.7648L16.2421 0L11.6414 8.04656L7.05937 0L1.60186 13.7648H0V15.851H8.23283V13.7648H7.00349L8.19557 10.3376L11.6414 16L15.0873 10.3376L16.2794 13.7648H15.0501V15.851H23.2829V13.7648H21.681Z" fill="#E5A8CB"/>
+                  </svg>
+                  | Ботанический сад
+            .Contacts-Info-Body-Item
+              p.Contacts-Info-Body-Item__Title Время работы:
+              .Contacts-Info-Body-Item-Wrap
+                p.Contacts-Info-Body-Item__Text 09.30 - 18.00 (понедельник - пятница)
+          .Contacts-Info-Body-Block
+            .Contacts-Info-Body-Item.Contacts-Info-Body-Item_phone
+              p.Contacts-Info-Body-Item__Title Телефон:
+              .Contacts-Info-Body-Item-Wrap
+                a(href="tel: +7 (978) 8000-373").Contacts-Info-Body-Item__Text +7 (978) 8000-373
+            .Contacts-Info-Body-Item
+              p.Contacts-Info-Body-Item__Title E-mail:
+              .Contacts-Info-Body-Item-Wrap
+                a(href="mailto: crimea@a-count.net").Contacts-Info-Body-Item__Text crimea@a-count.net
+            .Contacts-Info-Body-Item
+              p.Contacts-Info-Body-Item__Title Адрес:
+              .Contacts-Info-Body-Item-Wrap
+                p.Contacts-Info-Body-Item__Text г. Симферополь, Проспект Победы, д. 28 А, офис 609
+            .Contacts-Info-Body-Item
+              p.Contacts-Info-Body-Item__Title Время работы:
+              .Contacts-Info-Body-Item-Wrap
+                p.Contacts-Info-Body-Item__Text 09.30 - 18.00 (понедельник - пятница)

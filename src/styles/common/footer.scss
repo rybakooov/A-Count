@@ -1,0 +1,161 @@
+.Footer{
+  margin-top: auto;
+  &Main{
+    padding: 40px 0;
+    @extend %grid;
+  }
+  &Under{
+    border-top: 1px solid #F7F7F7;
+    padding: 40px 0;
+    @extend %grid-OneRow;
+  }
+  .Logo{
+    grid-area: LT;
+  }
+}
+.Social{
+  grid-area: LB;
+  margin-top: auto;
+  &__Title{
+    @extend %big-text;
+    margin-bottom: 24px;
+    color: var(--cherry);
+    display: none;
+  }
+  &__Link{
+    @extend %small-text-wide;
+    color: var(--dark-gray);
+
+    &_vk{
+      @include hoverMixin(){
+        color: #4d7198;
+      }
+    }
+    &_fb{
+      @include hoverMixin(){
+        color: #3b5998;
+      }
+    }
+    &_tg{
+      @include hoverMixin(){
+        color: #0088cc;
+      }
+    }
+    &:not(:last-child){
+      margin-right: 24px;
+    }
+  }
+}
+.GeoBlock{
+  grid-area: R;
+  width: 50%;
+  &__Title{
+    @extend %big-text;
+    margin-bottom: 24px;
+    color: var(--cherry);
+  }
+  a.GeoBlock__Text{
+    @include hoverMixin(){
+      color: var(--cherry);
+    }
+  }
+  &__Text{
+    @extend %small-text-wide;
+    color: var(--dark-gray);
+    display: block;
+    &:not(:last-child){
+      margin-bottom: 16px;
+    }
+  }
+  &:nth-child(2n - 1){
+    margin-left: auto;
+  }
+}
+
+.Rights{
+  @extend %small-text-wide;
+  color: var(--mid-light-gray);
+  grid-area: L;
+}
+
+.Policity{
+  @extend %small-text-wide;
+  color: var(--mid-light-gray);
+  grid-area: R;
+  width: 50%;
+  @include hoverMixin(){
+    color: var(--dark-gray);
+  }
+}
+
+.RybaCode{
+  @extend %small-text-wide;
+  color: var(--mid-light-gray);
+  grid-area: R;
+  margin-left: auto;
+  width: 50%;
+  a {
+    color: var(--black);
+    font-weight: 600;
+  }
+}
+
+
+.FormPopup{
+  width: 600px;
+  &__Title{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 125%;
+    color: var(--black);
+    margin-bottom: 40px;
+  }
+  &-Row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    .Form-Body-Label{
+      width: calc(50% - 12px);
+      input{
+        max-width: 100%;
+      }
+      &:first-child{
+        margin-right: 24px;
+      }
+      &:last-child{
+        width: 100%;
+      }
+    }
+    &-Bot{
+      display: flex;
+      width: 100%;
+      align-items: center;
+      .Form-Body-CheckboxLabel {
+        margin-left: 24px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.SuccessForm{
+  @extend %grid;
+  width: 640px;
+  &__Title{
+    grid-area: LT;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 125%;
+    color: var(--black);
+  }
+  &__Img{
+    grid-area: R;
+    margin-left: auto;
+  }
+  &__Text{
+    grid-area: LB;
+    margin-top: auto;
+    @extend %text;
+    color: var(--mid-gray);
+  }
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="assets/styles/app.css"/>
+    <link rel="icon" type="image/svg+xml" href="assets/images/Favicon.svg"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <script type="text/javascript" src="assets/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/Header.js"></script>
+    <script type="text/javascript" src="assets/scripts/slick.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/main.js"></script>
+    <script type="text/javascript" src="assets/scripts/Popup.js"></script>
+    <!-- validataion-->
+    <script type="text/javascript" src="assets/scripts/supaform.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/Validation.js"></script>
+    <!-- if price page-->
+    <script type="text/javascript" src="assets/scripts/price.js"></script>
+    <!-- if price page END-->
+    <!-- MAPBOX if "contacts"-->
+    <script type="text/javascript" src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.1/mapbox-gl-language.js"></script>
+    <!-- MAPBOX if "contacts" END-->
+    <title> Услуги бухгалтерского учета | A-count
+    </title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header class="Header">
+        <div class="container"><a class="Logo" href="/"><img src="assets/images/Logo.svg" alt="Логотип A-count"/></a>
+          <div class="HeaderInfo">
+            <div class="HeaderInfo-City">
+              <div class="HeaderInfo-City__Bg"></div><svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L3 3L5 1" stroke="#0F0F0F" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+              <div class="HeaderInfo-City__El HeaderInfo-City__El_active" data-phoneNum="0">Москва</div>
+              <div class="HeaderInfo-City__El" data-phoneNum="1">Симферополь</div>
+              <div class="HeaderInfo-City__El" data-phoneNum="2">Чебаркуль</div>
+            </div>
+            <div class="HeaderInfo-Phones"><a class="HeaderInfo__Phone HeaderInfo__Phone_active" href="tel: 8 (499) 189-78-70" data-phoneNum="0">8 (499) 189-78-70</a><a class="HeaderInfo__Phone" href="tel: 8 (499) 189-78-71" data-phoneNum="1">8 (499) 189-78-71</a><a class="HeaderInfo__Phone" href="tel: 8 (499) 189-78-72" data-phoneNum="2">8 (499) 189-78-72</a></div>
+          </div>
+          <nav class="Nav">
+            <div class="Nav__Link"> <a href="#">Аккаунтинг</a></div>
+            <div class="Nav__Link"> <a href="#">Услуги</a></div>
+            <div class="Nav__Link"> <a href="#">Стоимость</a></div>
+            <div class="Nav__Link"> <a href="#">Блог</a></div>
+            <div class="Nav__Link"> <a href="#">О нас</a></div>
+            <div class="Nav__Link"> <a href="#">Контакты</a></div>
+          </nav>
+          <button class="CallOrder" data-callOrder="data-callOrder">Заказать звонок</button>
+        </div>
+      </header>
+      <main class="Main">
+        <section class="ServicesSolo">
+          <div class="container">
+            <h1 class="ServicesSolo__Title">Услуги бухгалтерского учета</h1>
+            <p class="ServicesSolo__Text">Компания «A.Count» предлагает высокопрофессиональные услуги бухгалтерского учета всем, кто заинтересован в качественном и аккуратном ведении финансовых дел предприятия вне зависимости от его размеров.</p>
+            <div class="ServicesSolo-Grid"><a class="ServicesSolo-Grid-Item" href="#">
+                <p class="ServicesSolo-Grid-Item__Title">Бухгалтерский аутсорсинг</p>
+                <div class="ServicesSolo-Grid-Item-Bottom">
+                  <p class="ServicesSolo-Grid-Item-Bottom__Price">от 10 000 ₽/мес</p><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26" cy="26" r="26" fill="#B5076B"/>
+<path d="M17 25.5H35.5M35.5 25.5L29 19M35.5 25.5L29 32" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div></a><a class="ServicesSolo-Grid-Item" href="#">
+                <p class="ServicesSolo-Grid-Item__Title">Ведение бухгалтерского учета</p>
+                <div class="ServicesSolo-Grid-Item-Bottom">
+                  <p class="ServicesSolo-Grid-Item-Bottom__Price">от 10 000 ₽/мес</p><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26" cy="26" r="26" fill="#B5076B"/>
+<path d="M17 25.5H35.5M35.5 25.5L29 19M35.5 25.5L29 32" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div></a><a class="ServicesSolo-Grid-Item" href="#">
+                <p class="ServicesSolo-Grid-Item__Title">Бухгалтерское сопровождение <br>ИП и ООО</p>
+                <div class="ServicesSolo-Grid-Item-Bottom">
+                  <p class="ServicesSolo-Grid-Item-Bottom__Price">от 10 000 ₽/мес</p><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26" cy="26" r="26" fill="#B5076B"/>
+<path d="M17 25.5H35.5M35.5 25.5L29 19M35.5 25.5L29 32" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div></a><a class="ServicesSolo-Grid-Item" href="#">
+                <p class="ServicesSolo-Grid-Item__Title">Постановка бухгалтерского учета</p>
+                <div class="ServicesSolo-Grid-Item-Bottom">
+                  <p class="ServicesSolo-Grid-Item-Bottom__Price">от 6 000 ₽</p><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26" cy="26" r="26" fill="#B5076B"/>
+<path d="M17 25.5H35.5M35.5 25.5L29 19M35.5 25.5L29 32" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div></a><a class="ServicesSolo-Grid-Item" href="#">
+                <p class="ServicesSolo-Grid-Item__Title">Восстановление <br>бухгалтерского учета</p>
+                <div class="ServicesSolo-Grid-Item-Bottom">
+                  <p class="ServicesSolo-Grid-Item-Bottom__Price">от 6 000 ₽</p><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26" cy="26" r="26" fill="#B5076B"/>
+<path d="M17 25.5H35.5M35.5 25.5L29 19M35.5 25.5L29 32" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div></a><a class="ServicesSolo-Grid-Item" href="#">
+                <p class="ServicesSolo-Grid-Item__Title">Бухгалтерские услуги в Симферополе</p>
+                <div class="ServicesSolo-Grid-Item-Bottom">
+                  <p class="ServicesSolo-Grid-Item-Bottom__Price">от 5 000 ₽/мес</p><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26" cy="26" r="26" fill="#B5076B"/>
+<path d="M17 25.5H35.5M35.5 25.5L29 19M35.5 25.5L29 32" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div></a><a class="ServicesSolo-Grid-Item" href="#">
+                <p class="ServicesSolo-Grid-Item__Title">Бухгалтерские семинары в Симферополе</p>
+                <div class="ServicesSolo-Grid-Item-Bottom">
+                  <p class="ServicesSolo-Grid-Item-Bottom__Price"></p><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26" cy="26" r="26" fill="#B5076B"/>
+<path d="M17 25.5H35.5M35.5 25.5L29 19M35.5 25.5L29 32" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div></a><a class="ServicesSolo-Grid-Item" href="#">
+                <p class="ServicesSolo-Grid-Item__Title">Подготовка отчетов о движении денежных средств по зарубежным счетам физических лиц</p>
+                <div class="ServicesSolo-Grid-Item-Bottom">
+                  <p class="ServicesSolo-Grid-Item-Bottom__Price"></p><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26" cy="26" r="26" fill="#B5076B"/>
+<path d="M17 25.5H35.5M35.5 25.5L29 19M35.5 25.5L29 32" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div></a><a class="ServicesSolo-Grid-Item" href="#">
+                <p class="ServicesSolo-Grid-Item__Title">Криминальный Аудит</p>
+                <div class="ServicesSolo-Grid-Item-Bottom">
+                  <p class="ServicesSolo-Grid-Item-Bottom__Price"></p><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26" cy="26" r="26" fill="#B5076B"/>
+<path d="M17 25.5H35.5M35.5 25.5L29 19M35.5 25.5L29 32" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div></a><a class="ServicesSolo-Grid-Item" href="#">
+                <p class="ServicesSolo-Grid-Item__Title">Проверка контрагентов</p>
+                <div class="ServicesSolo-Grid-Item-Bottom">
+                  <p class="ServicesSolo-Grid-Item-Bottom__Price"></p><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26" cy="26" r="26" fill="#B5076B"/>
+<path d="M17 25.5H35.5M35.5 25.5L29 19M35.5 25.5L29 32" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div></a></div>
+          </div>
+        </section>
+        <section class="Form">
+          <div class="container">
+            <div class="Form-Head">
+              <h6 class="Form-Head__Title">Давайте развивать <br>Ваш бизнес вместе</h6>
+              <p class="Form-Head__Text">Пишите на почту <a href="mailto: info@a-count.ru">info@a-count.ru</a> <br>и звоните по телефону <a href="tel: +7 (499) 189-78-70">+7 (499) 189-78-70</a></p>
+            </div>
+            <form class="Form-Body">
+              <label class="Form-Body-Label">
+                <p>Имя <span>*</span></p>
+                <input type="text" data-required="data-required" id="userName" placeholder="Иван Иванов"/>
+              </label>
+              <label class="Form-Body-Label">
+                <p>Телефон <span>*</span></p>
+                <input type="text" data-type="tel" data-required="data-required" id="userPhone" placeholder="8 (999) 999-99-99"/>
+              </label>
+              <label class="Form-Body-Label">
+                <p>E-mail <span>*</span></p>
+                <input type="text" data-type="email" data-required="data-required" id="userEmail" placeholder="ivan@mail.ru"/>
+              </label>
+              <label class="Form-Body-Label">
+                <p>Компания</p>
+                <input type="text" id="userCompany" placeholder="ООО “Ромашка”"/>
+              </label>
+              <label class="Form-Body-Label">
+                <p>Сообщение</p>
+                <input type="text" id="userMessage" placeholder="Хочу уйти от штатной бухгалтерии"/>
+              </label>
+              <label class="Form-Body-CheckboxLabel">
+                <input type="checkbox" data-required="data-required" checked="checked"/>
+                <div class="Form-Body-CheckboxLabel__Mark"></div>
+                <p>Я согласен с политикой конфиденциальности</p>
+              </label>
+              <button class="Form__Submit" onclick="submitForm(this, event)">Отправить сообщение</button>
+            </form><img class="Form__Img" src="assets/images/Form.svg" alt="Давайте развивать Ваш бизнес вместе A-Count"/>
+          </div>
+        </section>
+      </main>
+      <footer class="Footer">
+        <div class="container">
+          <div class="FooterMain"><a class="Logo" href="/"><img src="assets/images/Logo.svg" alt="Логотип A-count"/></a>
+            <div class="GeoBlock">
+              <p class="GeoBlock__Title">Москва</p>
+              <p class="GeoBlock__Text">129323 г. Москва, проезд Серебрякова, 3</p><a class="GeoBlock__Text" href="tel: 8 (499) 189-78-70">8 (499) 189-78-70</a><a class="GeoBlock__Text" href="mailto: ryabonenko@a-count.net">ryabonenko@a-count.net</a>
+            </div>
+            <div class="GeoBlock">
+              <p class="GeoBlock__Title">Крым</p>
+              <p class="GeoBlock__Text">г. Симферополь, Проспект Победы, д. 28 А, офис 609</p><a class="GeoBlock__Text" href="tel: 8 (978) 8000-373">8 (978) 8000-373</a><a class="GeoBlock__Text" href="mailto: crimea@a-count.net">crimea@a-count.net</a>
+            </div>
+            <div class="Social">
+              <p class="Social__Title">Социальные сети</p><a class="Social__Link Social__Link_vk" href="#">ВКонтакте</a><a class="Social__Link Social__Link_fb" href="#">Facebook</a><a class="Social__Link Social__Link_tg" href="#">Telegram</a>
+            </div>
+          </div>
+          <div class="FooterUnder">
+            <p class="Rights">© 2020 A.Count | Все права защищены</p><a class="Policity" href="#">Политика конфиденциальности</a>
+            <p class="RybaCode">Сделано с любовью в <a href="#">RybaСode</a></p>
+          </div>
+        </div>
+      </footer>
+      <form class="FormPopup">
+        <p class="FormPopup__Title">Заказать звонок</p>
+        <div class="FormPopup-Row">
+          <label class="Form-Body-Label">
+            <p>Имя <span>*</span></p>
+            <input type="text" data-required="data-required" id="popupUserName" placeholder="Иван Иванов"/>
+          </label>
+          <label class="Form-Body-Label">
+            <p>Телефон <span>*</span></p>
+            <input type="text" data-type="tel" data-required="data-required" id="popupUserPhone" placeholder="8 (999) 999-99-99"/>
+          </label>
+          <label class="Form-Body-Label">
+            <p>Сообщение</p>
+            <input type="text" id="popupUserMessage" placeholder="Хочу уйти от штатной бухгалтерии"/>
+          </label>
+        </div>
+        <div class="FormPopup-Row-Bot">
+          <button class="Form__Submit" onclick="submitForm(this, event)">Отправить сообщение</button>
+          <label class="Form-Body-CheckboxLabel">
+            <input type="checkbox" checked="checked"/>
+            <div class="Form-Body-CheckboxLabel__Mark"></div>
+            <p>Я согласен с политикой конфиденциальности</p>
+          </label>
+        </div>
+      </form>
+      <div class="SuccessForm">
+        <p class="SuccessForm__Title">Сообщение <br>отправлено!</p><img class="SuccessForm__Img" src="assets/images/Success.svg" alt="Success A-Count"/>
+        <p class="SuccessForm__Text">Постараемся ответить, как можно скорее</p>
+      </div>
+    </div>
+  </body>
+</html>

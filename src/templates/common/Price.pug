@@ -1,0 +1,106 @@
+section.Price(class=blueFooter ? 'Price_blue_80' : '')
+  .container
+    .Price-Head
+      h3.Price-Head__Title Сколько это будет <br>стоить для Вас
+      p.Price-Head__Text Ответьте на вопросы и мы подскажем какой тарифный план подходит именно Вам, а так же дадим&nbsp;
+        span скидку <br>на первый месяц пользования
+    .Price-Quiz
+      .Price-Quiz-Question.Price-Quiz-Question_current
+        p.Price-Quiz-Question__Title Какой объем документации будет обрабатываться онлайн?
+        .Price-Quiz-Answers
+          input(type="radio" name="firstRow" id="11" value="1 раз в месяц")
+          label(for="11").Price-Quiz-Answers-Label
+            .Price-Quiz-Answers-Label__Flag
+            p.Price-Quiz-Answers-Label__Value 1 раз в месяц
+          input(type="radio" name="firstRow" id="12" value="2 раз в месяц")
+          label(for="12").Price-Quiz-Answers-Label
+            .Price-Quiz-Answers-Label__Flag
+            p.Price-Quiz-Answers-Label__Value 2 раз в месяц
+          input(type="radio" name="firstRow" id="13" value="3 раз в месяц")
+          label(for="13").Price-Quiz-Answers-Label
+            .Price-Quiz-Answers-Label__Flag
+            p.Price-Quiz-Answers-Label__Value 3 раз в месяц
+          input(type="radio" name="firstRow" id="14" value="4 раз в месяц")
+          label(for="14").Price-Quiz-Answers-Label
+            .Price-Quiz-Answers-Label__Flag
+            p.Price-Quiz-Answers-Label__Value 4 раз в месяц
+          button.Price-Quiz-Answers__Change Изменить ответ
+      .Price-Quiz-Question
+        p.Price-Quiz-Question__Title Сколько сотрудников в Вашей фирме?
+        .Price-Quiz-Answers
+          input(type="radio" name="secondRow" id="21" value="0 - 6")
+          label(for="21").Price-Quiz-Answers-Label
+            .Price-Quiz-Answers-Label__Flag
+            p.Price-Quiz-Answers-Label__Value 0 - 6
+          input(type="radio" name="secondRow" id="22" value="7 - 12")
+          label(for="22").Price-Quiz-Answers-Label
+            .Price-Quiz-Answers-Label__Flag
+            p.Price-Quiz-Answers-Label__Value 7 - 12
+          input(type="radio" name="secondRow" id="23" value="13 - 50")
+          label(for="23").Price-Quiz-Answers-Label
+            .Price-Quiz-Answers-Label__Flag
+            p.Price-Quiz-Answers-Label__Value 13 - 50
+          input(type="radio" name="secondRow" id="24" value="50 - 100")
+          label(for="24").Price-Quiz-Answers-Label
+            .Price-Quiz-Answers-Label__Flag
+            p.Price-Quiz-Answers-Label__Value 50 - 100
+          button.Price-Quiz-Answers__Change Изменить ответ
+      .Price-Quiz-Question
+        p.Price-Quiz-Question__Title В каком городе находится Ваш бизнес?
+        .Price-Quiz-Answers
+          input(type="radio" name="thirdRow" id="31" value="Москва")
+          label(for="31").Price-Quiz-Answers-Label
+            .Price-Quiz-Answers-Label__Flag
+            p.Price-Quiz-Answers-Label__Value Москва
+          input(type="radio" name="thirdRow" id="32" value="Симферополь")
+          label(for="32").Price-Quiz-Answers-Label
+            .Price-Quiz-Answers-Label__Flag
+            p.Price-Quiz-Answers-Label__Value Симферополь
+          button.Price-Quiz-Answers__Change Изменить ответ
+      .Price-Quiz-Question
+        p.Price-Quiz-Question__Title Да?
+        .Price-Quiz-Answers
+          input(type="radio" name="4Row" id="41" value="Москва")
+          label(for="41").Price-Quiz-Answers-Label
+            .Price-Quiz-Answers-Label__Flag
+            p.Price-Quiz-Answers-Label__Value Москва
+          input(type="radio" name="4Row" id="42" value="Симферополь")
+          label(for="42").Price-Quiz-Answers-Label
+            .Price-Quiz-Answers-Label__Flag
+            p.Price-Quiz-Answers-Label__Value Симферополь
+          button.Price-Quiz-Answers__Change Изменить ответ
+      .Price-Quiz-Question
+        p.Price-Quiz-Question__Title Да?
+        .Price-Quiz-Answers
+          input(type="radio" name="5Row" id="51" value="Москва")
+          label(for="51").Price-Quiz-Answers-Label
+            .Price-Quiz-Answers-Label__Flag
+            p.Price-Quiz-Answers-Label__Value Москва
+          input(type="radio" name="5Row" id="52" value="Симферополь")
+          label(for="52").Price-Quiz-Answers-Label
+            .Price-Quiz-Answers-Label__Flag
+            p.Price-Quiz-Answers-Label__Value Симферополь
+          button.Price-Quiz-Answers__Change Изменить ответ
+      .Price-Quiz-Question
+        p.Price-Quiz-Question__Title Да?
+        .Price-Quiz-Answers
+          input(type="radio" name="6Row" id="61" value="Москва")
+          label(for="61").Price-Quiz-Answers-Label
+            .Price-Quiz-Answers-Label__Flag
+            p.Price-Quiz-Answers-Label__Value Москва
+          input(type="radio" name="6Row" id="62" value="Симферополь")
+          label(for="62").Price-Quiz-Answers-Label
+            .Price-Quiz-Answers-Label__Flag
+            p.Price-Quiz-Answers-Label__Value Симферополь
+          button.Price-Quiz-Answers__Change Изменить ответ
+    .Price-Result
+      .Price-Result__Show
+        p.Price-Result__Text Вам подходит:
+        .Price-Result-Item
+          .Price-Result-Item-Head
+            p.Price-Result-Item-Head__Rate Тариф "Комфорт"
+            p.Price-Result-Item-Head__Price 16 500 руб/мес
+          p.Price-Result-Item__Desc Удобный тариф для малого бизнеса, включающий в себя необходимые функции <br>и параметры
+          .Price-Result-Item-Buttons
+            a(href="#").Price-Result-Item-Buttons__Look Смотреть тариф
+            a(href="#").Price-Result-Item-Buttons__Rates Все тарифы

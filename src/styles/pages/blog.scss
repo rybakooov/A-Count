@@ -1,0 +1,299 @@
+.BlogBanner{
+  background-color: #FAF5FA;
+  padding: 60px 0;
+  .container{
+    @extend %grid-OneRow;
+    align-items: center;
+  }
+  &__Img{
+    grid-area: R;
+    margin: 0 auto;
+    max-height: 360px;
+  }
+  &-Desc{
+    grid-area: L;
+    &__Title{
+      margin-bottom: 24px;
+      @extend %h1;
+    }
+    &__Text {
+      @extend %text;
+      color: var(--dark-gray);
+      margin-bottom: 48px;
+    }
+    &-Sub{
+      max-width: 470px;
+      display: flex;
+      input{
+        height: 42px;
+        padding-left: 16px;
+        border: 1px solid var(--mid-light-gray);
+        border-radius: 4px;
+        flex: 1;
+        margin-right: 16px;
+        background-color: transparent;
+        @extend %small-text;
+      }
+      button{
+        @extend %cherry-btn;
+        padding: 12px 28px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.Blog{
+  padding: 80px 0 120px;
+  &-Head{
+    @extend %grid-OneRow;
+    margin-bottom: 40px;
+    &__Title{
+      grid-area: L;
+      @extend %h1;
+      color: var(--black);
+    }
+    &-Filter{
+      grid-area: R;
+      display: flex;
+      flex-wrap: wrap;
+      margin: -4px;
+      &-Item{
+        margin: 4px !important;
+        height: 34px !important;
+        &:nth-child(n+8){
+          display: none;
+        }
+        input{
+          display: none;
+          &:checked + .Blog-Head-Filter-Item__Button{
+            @extend %tabBtnActive;
+          }
+        }
+        &__Button{
+          @extend %tabBtn;
+          padding: 8px 16px;
+          font-size: 14px;
+          line-height: 115%;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+      &__More{
+        width: 16px;
+        height: 16px;
+        border: none;
+        background-color: var(--about-white);
+        align-self: center;
+        border-radius: 50%;
+        margin: 4px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transform: rotate(-90deg);
+        transition: .3s;
+        &:hover svg path{
+          @media screen and (min-width: 1024px){
+            stroke: var(--black);
+          }
+        }
+        svg path{
+          transition: .3s;
+        }
+        &_active{
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+  &-Body{
+  }
+  &-Item{
+    @extend %grid-OneRow;
+    margin: 0;
+    height: 359px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--about-white);
+    padding-top: 40px;
+    &-Desc{
+      grid-area: L;
+      display: flex;
+      flex-direction: column;
+      &__Title{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 125%;
+        margin-bottom: 24px;
+      }
+      &__Btn{
+        @extend %black-btn;
+        padding: 13px 28px;
+        margin-top: auto;
+        background-color: transparent;
+        display: inline-flex;
+        align-self: flex-start;
+        cursor: pointer;
+      }
+      &-Sub{
+        display: flex;
+        margin-bottom: 24px;
+        time{
+          margin-right: 24px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 115%;
+          color: var(--black);
+        }
+        &-Tags{
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 115%;
+          color: var(--mid-gray);
+          span{
+            color: var(--cherry);
+            &:not(:first-child):before{
+              content: ' ';
+            }
+          }
+        }
+      }
+      &__Text{
+        @extend %text;
+        color: var(--mid-gray);
+      }
+    }
+    &-Img{
+      grid-area: R;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 4px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__More{
+    margin: 40px auto 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--mid-gray);
+    @extend %text;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    transition: .3s;
+    &:hover {
+      @media screen and (min-width: 1024px) {
+        color: var(--dark-gray);
+      }
+      span svg path{
+        @media screen and (min-width: 1024px) {
+          stroke: var(--black);
+        }
+      }
+    }
+    span{
+      margin-left: 8px;
+      width: 16px;
+      height: 16px;
+      background-color: var(--about-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg path{
+        transition: .3s;
+      }
+    }
+  }
+}
+
+
+
+.Post{
+  padding: 40px 0 120px;
+  &Article{
+    &-Block{
+      @extend %grid-OneRow;
+      &:not(:first-child){
+        margin-top: 80px;
+      }
+      &-Head{
+        grid-area: L;
+        position: sticky;
+        top: 92px;
+        margin-bottom: auto;
+        &__Title{
+          @extend %h1;
+          margin-bottom: 24px;
+        }
+      }
+      &-Content{
+        grid-area: R;
+        p{
+          @extend %text;
+          color: var(--mid-gray);
+          &:not(:last-child){
+            margin-bottom: 16px;
+          }
+        }
+        &-Img{
+          width: 100%;
+          height: 276px;
+          &:not(:first-child){
+            margin-top: 40px;
+          }
+          &:not(:last-child){
+            marginbottom: 40px;
+          }
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+        h4, h5, h6{
+          margin: 0;
+          @extend %big-text;
+          color: var(--black);
+          &:not(:last-child){
+            margin-bottom: 16px;
+          }
+          &:not(:first-child){
+            margin-top: 40px;
+          }
+        }
+        ul {
+          margin: 0;
+          padding: 0 0 0 18px;
+          li {
+            margin: 16px 0;
+            @extend %text;
+            color: var(--mid-gray);
+          }
+        }
+      }
+    }
+    &__Source{
+      margin-top: 80px;
+      display: block;
+      @extend %text;
+      color: var(--cherry);
+      @include hoverMixin(){
+        color: var(--hover-cherry);
+      }
+      &:active{
+        @media screen and (min-width: 1024px){
+          color: var(--active-cherry);
+        }
+      }
+    }
+  }
+}

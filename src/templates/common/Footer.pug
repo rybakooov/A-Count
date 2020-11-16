@@ -1,0 +1,46 @@
+footer.Footer(style=blueFooter ? 'background-color: var(--light-blue);' : '')
+  .container
+    .FooterMain
+      a(href="/").Logo
+        img(src="assets/images/Logo.svg", alt="Логотип A-count")
+      .GeoBlock
+        p.GeoBlock__Title Москва
+        p.GeoBlock__Text 129323 г. Москва, проезд Серебрякова, 3
+        a(href="tel: 8 (499) 189-78-70").GeoBlock__Text 8 (499) 189-78-70
+        a(href="mailto: ryabonenko@a-count.net").GeoBlock__Text ryabonenko@a-count.net
+      .GeoBlock
+        p.GeoBlock__Title Крым
+        p.GeoBlock__Text г. Симферополь, Проспект Победы, д. 28 А, офис 609
+        a(href="tel: 8 (978) 8000-373").GeoBlock__Text 8 (978) 8000-373
+        a(href="mailto: crimea@a-count.net").GeoBlock__Text crimea@a-count.net
+      .Social
+        p.Social__Title Социальные сети
+        a(href="#").Social__Link.Social__Link_vk ВКонтакте
+        a(href="#").Social__Link.Social__Link_fb Facebook
+        a(href="#").Social__Link.Social__Link_tg Telegram
+    .FooterUnder
+      p.Rights © 2020 A.Count | Все права защищены
+      a(href="#").Policity Политика конфиденциальности
+      p.RybaCode Сделано с любовью в <a href="#">RybaСode</a>
+form.FormPopup
+  p.FormPopup__Title Заказать звонок
+  .FormPopup-Row
+    label.Form-Body-Label
+      p Имя <span>*</span>
+      input(type="text" data-required id="popupUserName" placeholder="Иван Иванов")
+    label.Form-Body-Label
+      p Телефон <span>*</span>
+      input(type="text" data-type="tel" data-required id="popupUserPhone" placeholder="8 (999) 999-99-99")
+    label.Form-Body-Label
+      p Сообщение
+      input(type="text" id="popupUserMessage" placeholder="Хочу уйти от штатной бухгалтерии")
+  .FormPopup-Row-Bot
+    button(onclick="submitForm(this, event)").Form__Submit Отправить сообщение
+    label.Form-Body-CheckboxLabel
+      input(type="checkbox" checked)
+      .Form-Body-CheckboxLabel__Mark
+      p Я согласен с политикой конфиденциальности
+.SuccessForm
+  p.SuccessForm__Title Сообщение <br>отправлено!
+  img(src="assets/images/Success.svg" alt="Success A-Count").SuccessForm__Img
+  p.SuccessForm__Text Постараемся ответить, как можно скорее

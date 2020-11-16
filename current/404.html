@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="assets/styles/app.css"/>
+    <link rel="icon" type="image/svg+xml" href="assets/images/Favicon.svg"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <script type="text/javascript" src="assets/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/Header.js"></script>
+    <script type="text/javascript" src="assets/scripts/slick.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/main.js"></script>
+    <script type="text/javascript" src="assets/scripts/Popup.js"></script>
+    <!-- validataion-->
+    <script type="text/javascript" src="assets/scripts/supaform.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/Validation.js"></script>
+    <!-- if price page-->
+    <script type="text/javascript" src="assets/scripts/price.js"></script>
+    <!-- if price page END-->
+    <!-- MAPBOX if "contacts"-->
+    <script type="text/javascript" src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.1/mapbox-gl-language.js"></script>
+    <!-- MAPBOX if "contacts" END-->
+    <title> Контакты | A-count
+    </title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header class="Header">
+        <div class="container"><a class="Logo" href="/"><img src="assets/images/Logo.svg" alt="Логотип A-count"/></a>
+          <div class="HeaderInfo">
+            <div class="HeaderInfo-City">
+              <div class="HeaderInfo-City__Bg"></div><svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L3 3L5 1" stroke="#0F0F0F" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+              <div class="HeaderInfo-City__El HeaderInfo-City__El_active" data-phoneNum="0">Москва</div>
+              <div class="HeaderInfo-City__El" data-phoneNum="1">Симферополь</div>
+              <div class="HeaderInfo-City__El" data-phoneNum="2">Чебаркуль</div>
+            </div>
+            <div class="HeaderInfo-Phones"><a class="HeaderInfo__Phone HeaderInfo__Phone_active" href="tel: 8 (499) 189-78-70" data-phoneNum="0">8 (499) 189-78-70</a><a class="HeaderInfo__Phone" href="tel: 8 (499) 189-78-71" data-phoneNum="1">8 (499) 189-78-71</a><a class="HeaderInfo__Phone" href="tel: 8 (499) 189-78-72" data-phoneNum="2">8 (499) 189-78-72</a></div>
+          </div>
+          <nav class="Nav">
+            <div class="Nav__Link"> <a href="#">Аккаунтинг</a></div>
+            <div class="Nav__Link"> <a href="#">Услуги</a></div>
+            <div class="Nav__Link"> <a href="#">Стоимость</a></div>
+            <div class="Nav__Link"> <a href="#">Блог</a></div>
+            <div class="Nav__Link"> <a href="#">О нас</a></div>
+            <div class="Nav__Link"> <a href="#">Контакты</a></div>
+          </nav>
+          <button class="CallOrder" data-callOrder="data-callOrder">Заказать звонок</button>
+        </div>
+      </header>
+      <main class="Main">
+        <section class="notFound">
+          <div class="container"><img src="assets/images/404.svg" alt="Страница не найдена"/><a href="/">Вернуться на главную</a></div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

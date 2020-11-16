@@ -1,0 +1,771 @@
+%indexLeftTitle {
+  @extend %h1;
+  margin-bottom: 24px;
+}
+
+.Banner{
+  background-color: var(--light-blue);
+  .container{
+    height: 560px;
+    display: flex;
+    align-items: center;
+  }
+  &-Img{
+    margin-right: 48px;
+    margin-left: auto;
+  }
+  &-Desc{
+    flex-shrink: 0;
+    margin-right: 48px;
+    &__Title{
+      @extend %h1;
+      margin-bottom: 24px;
+    }
+    &__Text{
+      @extend %text;
+      color: var(--dark-gray);
+      margin-bottom: 48px;
+      span{
+        color: var(--cherry);
+      }
+    }
+    &-Buttons{
+      display: flex;
+      &__Rates{
+        @extend %cherry-btn;
+        padding: 13px 28px;
+      }
+      &__About{
+        @extend %black-btn_cherryHover;
+        padding: 13px 28px;
+        margin-left: 24px;
+      }
+    }
+  }
+}
+
+
+.About{
+  padding: 120px 0;
+  .container{
+    @extend %grid;
+  }
+  &-Desc{
+    grid-area: LT;
+    &__Title{
+      max-width: 342px;
+      @extend %indexLeftTitle;
+    }
+    &__Text{
+      @extend %text;
+      color: var(--mid-gray);
+      max-width: 400px;
+    }
+  }
+  &-Items{
+    grid-area: R;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px -10px;
+    width: calc(100% + 20px);
+  }
+  &Item{
+    margin: 12px 10px;
+    width: calc(50% - 20px);
+    &__Title{
+      margin-top: 16px;
+      margin-bottom: 16px;
+      @extend %big-text;
+    }
+    &__Text{
+      @extend %text;
+      max-width: 360px;
+      color: var(--mid-gray);
+    }
+  }
+  &-Video{
+    grid-area: LB;
+    margin-top: auto;
+    .PopupVideo{
+      max-width: 100%;
+    }
+    &__Text{
+      font-style: italic;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 150%;
+      margin-bottom: 16px;
+      color: var(--mid-gray);
+    }
+    &__Link{
+      @extend %cherry-btn;
+      display: inline-flex;
+      align-items: center;
+      padding: 13px 28px;
+      cursor: pointer;
+      svg{
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+
+.Services{
+  background-color: var(--light-blue);
+  padding: 80px 0;
+  .container{
+    @extend %grid;
+  }
+  &__Title{
+    @extend %indexLeftTitle;
+    grid-area: LT;
+  }
+  &-List{
+    grid-area: R;
+  }
+  &Item{
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: .3s;
+    &:after{
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -32px;
+      background-color: #fff;
+      border: 1px solid #D6D6D6;
+      border-radius: 4px;
+      width: calc(100% + 64px);
+      height: calc(100% + 32px);
+      z-index: -1;
+      transition: .3s;
+      opacity: 0;
+    }
+    &:first-child{
+      .ServicesItem{
+        &-Head{
+          border-top: 1px solid var(--light-gray);
+        }
+      }
+    }
+    &-Head{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--light-gray);
+      &__Title{
+        @extend %big-text;
+        color: var(--dark-gray);
+        transition: .3s;
+      }
+      &__Plus{
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:after, &:before{
+          content: '';
+          width: 16px;
+          height: 1px;
+          background-color: #000;
+          display: block;
+          transition: .3s;
+        }
+        &:before{
+          position: absolute;
+          transform-origin: center;
+          transform: rotate(90deg);
+        }
+      }
+    }
+    &-Body{
+      display: none;
+      max-width: 360px;
+      color: var(--dark-gray);
+      @extend %text;  
+    }
+    &:not(.ServicesItem_active):hover{
+      .ServicesItem-Head__Title{
+        @media screen and (min-width: 1024px){
+          color: var(--black);
+        }
+      }
+      .ServicesItem-Head__Plus:after, .ServicesItem-Head__Plus:before{
+        background-color: var(--cherry);
+      }
+    }
+    &_active{
+      margin-bottom: 32px;
+      &:after{
+        opacity: 1;
+      }
+      .ServicesItem-Head{
+        border-color: transparent !important;
+        &__Title{
+          color: var(--cherry);
+        }
+        &__Plus{
+          &:before{
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+  &__Img{
+    grid-area: LB;
+    margin-top: auto;
+    margin-bottom: -80px;
+  }
+  &__Link{
+    @extend %black-btn_cherryHover;
+    margin-top: 32px;
+    display: inline-block;
+  }
+}
+
+
+.Price{
+  padding: 120px 0;
+  &.Price_blue_80{
+    padding: 80px 0;
+    background-color: var(--light-blue);
+    .Price-Quiz-Answers-Label{
+      border-color: var(--light-gray);
+    }
+    .Price-Quiz-Question:not(:last-child):before{
+      background-color: var(--light-gray);
+    }
+    .Price-Quiz-Question__Title:before{
+      background-color: var(--mid-light-gray);
+    }
+    .Price-Quiz-Question_current .Price-Quiz-Question__Title:before{
+      background-color: var(--purple);
+    }
+    .Price-Quiz-Question_complete .Price-Quiz-Question__Title:before{
+      background-color: var(--light-purple);
+    }
+  }
+  .container{
+    @extend %grid;
+  }
+  &-Head{
+    grid-area: LT;
+    &__Title{
+      @extend %indexLeftTitle;
+    }
+    &__Text{
+      @extend %text;
+      max-width: 424px;
+      color: var(--mid-gray);
+      span{
+        color: var(--cherry);
+      }
+    }
+  }
+  &-Quiz{
+    grid-area: R;
+    &-Question{
+      position: relative;
+      &:first-child .Price-Quiz-Answers{
+        display: flex;
+      }
+      &:not(:last-child){
+        padding-bottom: 64px;
+        &:before{
+          content: '';
+          width: 1px;
+          height: 100%;
+          top: 13.5px;
+          left: 7.5px;
+          background-color: var(--about-white);
+          display: block;
+          position: absolute;
+        }
+      }
+      &__Title{
+        display: flex;
+        align-items: center;
+        @extend %big-text;
+        color: var(--light-gray);
+        &:before{
+          transition: .3s;
+          z-index: 2;
+          content: '';
+          background: var(--about-white);
+          border: 1px solid  var(--about-white);
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          display: block;
+          margin-right: 16px;
+        }
+      }
+      &_current{
+        .Price-Quiz{
+          &-Question{
+            &__Title{
+              color: var(--black);
+              &:before{
+                background-color: var(--purple);
+              }
+            }
+          }
+          &-Answers{
+            //display: flex;
+          }
+        }
+      }
+      &_complete{
+        .Price-Quiz{
+          &-Question{
+            &__Title{
+              color: var(--mid-gray);
+              &:before{
+                background-color: var(--light-purple);
+              }
+            }
+          }
+          &-Answers{
+            //display: flex;
+            input:not(:checked) + .Price-Quiz-Answers-Label{
+              display: none;
+            }
+            input:checked + .Price-Quiz-Answers-Label{
+              display: flex;
+            }
+            &-Label{
+              &__Flag{
+                &:after{
+                  background-color: var(--light-purple);
+                }
+              }
+              &__Value{
+                color: var(--mid-gray);
+              }
+            }
+            &__Change{
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    &-Answers{
+      display: flex;
+      margin-top: 24px;
+      padding-left: 32px;
+      &-Label{
+        flex-grow: 1;
+        flex-shrink: 0;
+        padding: 13px 16px;
+        border: 1px solid var(--about-white);
+        border-radius: 4px;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        &__Flag{
+          margin-right: 8px;
+          border-radius: 50%;
+          width: 12px;
+          height: 12px;
+          border: 1px solid var(--light-gray);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:after{
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--purple);
+            opacity: 0;
+            transition: .3s;
+          }
+        }
+        &__Value{
+          @extend %small-text;
+        }
+        &:not(:last-child){
+          margin-right: 24px;
+        }
+      }
+      &__Change{
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        @extend %small-text;
+        color: var(--light-gray);
+        display: none;
+        flex: 1 1 100%;
+        text-align: left;
+      }
+      input {
+        display: none;
+        &:not(:checked) + .Price-Quiz-Answers-Label:hover .Price-Quiz-Answers-Label__Flag:after{
+          background-color: var(--light-purple);
+          opacity: 1;
+        }
+        &:checked + .Price-Quiz-Answers-Label{
+          .Price-Quiz-Answers-Label__Flag{
+            &:after{
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-Result{
+    grid-area: LB;
+    margin-top: auto;
+    &__Show{
+      display: none;
+    }
+    &__Text{
+      @extend %text;
+      margin-bottom: 16px;
+    }
+    &__While{
+      @extend %big-text;
+    }
+    &-Item{
+      padding: 24px;
+      max-width: 424px;
+      border: 1px dashed var(--light-gray);
+      border-radius: 4px;
+      &-Head{
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 16px;
+        &__Rate{
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 125%;
+          color: var(--cherry);
+        }
+        &__Price{
+          margin-left: auto;
+          @extend %big-text;
+          font-weight: 600;
+        }
+      }
+      &__Desc{
+        @extend %text;
+        color: var(--mid-gray);
+        margin-bottom: 24px;
+      }
+      &-Buttons{
+        display: flex;
+        &__Look{
+          flex: 1;
+          padding: 13px 16px;
+          text-align: center;
+          @extend %cherry-btn;
+          margin-right: 24px;
+        }
+        &__Rates{
+          flex: 1;
+          padding: 13px 16px;
+          text-align: center;
+          @extend %black-btn;
+        }
+      }
+    }
+  }
+}
+
+
+.Whom{
+  padding: 80px 0;
+  overflow: hidden;
+  background-color: var(--light-blue);
+  .container{
+    @extend %grid;
+  }
+  &-Head{
+    grid-area: LT;
+    &__Title{
+      @extend %indexLeftTitle;
+      margin-bottom: 24px;
+    }
+    &__Text{
+      @extend %text;
+      color: var(--mid-gray);
+      max-width: 424px;
+    }
+  }
+  &-List{
+    grid-area: R;
+    &_second{
+      .Whom-List__Item{
+        p{
+          &:nth-child(even){
+            transform: translateX(100%);
+            opacity: 0;
+          }
+          &:nth-child(odd){
+            transform: none;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    &-Switch{
+      margin-bottom: 40px;
+      @extend %big-text;
+      &__Btn{
+        @extend %tabBtn;
+        &_active{
+          @extend %tabBtnActive;
+        }
+      }
+    }
+    &__Item{
+      padding: 24px 0;
+      max-width: 536px;
+      border-top: 1px solid var(--light-gray);
+      position: relative;
+      &:last-child{
+        border-bottom: 1px solid var(--light-gray);
+      }
+      p{
+        transition: .3s;
+        &:nth-child(even){
+          position: relative;
+        }
+        &:nth-child(odd){
+          position: absolute;
+          transform: translateX(100%);
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &__Img{
+    grid-area: LB;
+    margin-top: auto;
+  }
+}
+
+
+.Cases{
+  padding: 120px 0;
+  overflow: hidden;
+  &__Title{
+    @extend %indexLeftTitle;
+    margin-bottom: 16px;
+  }
+  &-Row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__Subtitle{
+    margin: 0;
+    @extend %text;
+    color: var(--mid-gray);
+  }
+  &-Arrows{
+    display: flex;
+    &__Btn{
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1.5px solid var(--light-gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .3s;
+      svg path{
+        transition: .3s;
+      }
+      &:not(.slick-disabled){
+        background-color: var(--cherry);
+        border-color: var(--cherry);
+        cursor: pointer;
+        @include hoverMixin(){
+          background-color: var(--hover-cherry);
+        }
+        &:active{
+          @media screen and (min-width: 1024px){
+            background-color: var(--active-cherry);
+          }
+        }
+        svg path{
+          stroke: #fff;
+        }
+      }
+      &_prev svg{
+        margin-right: 3px;
+      }
+      &_next{
+        margin-left: 24px;
+        svg{
+          margin-left: 4px;
+          transform-origin: center;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &-Slider{
+    margin-top: 40px;
+    .slick-list{
+      overflow: visible;
+      margin: 0 -12px;
+    }
+    &-Item{
+      border: 1px solid var(--about-white);
+      padding: 24px;
+      margin: 0 12px;
+      border-radius: 4px;
+      &-Head{
+        display: flex;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--about-white);
+        &-imgbox{
+          width: 51px;
+          height: 51px;
+          border-radius: 50%;
+          overflow: hidden;
+          flex-shrink: 0;
+          margin-right: 16px;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+        &-Info{
+          &__Name{
+            @extend %big-text;
+            margin-bottom: 8px;
+          }
+          &__Where{
+            @extend %small-text;
+            color: var(--mid-gray);
+          }
+        }
+      }
+      &__Body{
+        @extend %text;
+        padding-top: 24px;
+        color: var(--mid-gray);
+      }
+    }
+  }
+}
+
+
+.Form{
+  padding: 80px 0;
+  background-color: var(--light-blue);
+  .container{
+    @extend %grid;
+  }
+  &-Head{
+    grid-area: LT;
+    &__Title{
+      @extend %indexLeftTitle;
+      margin-bottom: 24px;
+      margin-top: 0;
+    }
+    &__Text{
+      @extend %text;
+      color: var(--mid-gray);
+      a{
+        color: var(--cherry);
+      }
+    }
+  }
+
+  &__Submit{
+    @extend %cherry-btn;
+    padding: 13px 28px;
+    cursor: pointer;
+  }
+  &-Body{
+    grid-area: R;
+    &-Label{
+      display: block;
+      margin-bottom: 40px;
+      p {
+        margin-bottom: 4px;
+        @extend %text;
+        span{
+          color: var(--cherry);
+        }
+      }
+      input {
+        padding: 4px 0;
+        font-weight: normal;
+        font-size: 16px;
+        width: 100%;
+        max-width: 424px;
+        background-color: transparent;
+        line-height: 150%;
+        border: none;
+        border-bottom: 1px solid var(--light-gray);
+        color: var(--black);
+        transition: .3s;
+        &::placeholder{
+          color: var(--mid-gray);
+        }
+      }
+    }
+    &-CheckboxLabel{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 24px;
+      &__Mark{
+        display: flex;
+        width: 16px;
+        height: 16px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--light-gray);
+        border-radius: 4px;
+        flex-shrink: 0;
+        margin-right: 8px;
+        &:after{
+          content: '';
+          opacity: 0;
+          transition: .3s;
+          width: 10px;
+          height: 10px;
+          display: block;
+          border-radius: 2px;
+          background-color: var(--cherry);
+        }
+      }
+      p{
+        @extend %small-text;
+        color: var(--mid-gray);
+      }
+      input{
+        display: none;
+        &.input-err + .Form-Body-CheckboxLabel__Mark{
+          border-color: var(--red);
+        }
+        &:checked + .Form-Body-CheckboxLabel__Mark{
+          &:after{
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  &__Img{
+    grid-area: LB;
+    margin-top: auto;
+    margin-left: -23px;
+  }
+}

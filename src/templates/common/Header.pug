@@ -1,0 +1,31 @@
+header.Header
+  .container
+    a(href="/").Logo
+      img(src="assets/images/Logo.svg", alt="Логотип A-count")
+    .HeaderInfo
+      .HeaderInfo-City
+        .HeaderInfo-City__Bg
+        <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L3 3L5 1" stroke="#0F0F0F" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        .HeaderInfo-City__El(data-phoneNum="0").HeaderInfo-City__El_active Москва
+        .HeaderInfo-City__El(data-phoneNum="1") Симферополь
+        .HeaderInfo-City__El(data-phoneNum="2") Чебаркуль
+      .HeaderInfo-Phones
+        a(href="tel: 8 (499) 189-78-70" data-phoneNum="0").HeaderInfo__Phone.HeaderInfo__Phone_active 8 (499) 189-78-70
+        a(href="tel: 8 (499) 189-78-71" data-phoneNum="1").HeaderInfo__Phone 8 (499) 189-78-71
+        a(href="tel: 8 (499) 189-78-72" data-phoneNum="2").HeaderInfo__Phone 8 (499) 189-78-72
+    nav.Nav
+      .Nav__Link 
+        a(href="#") Аккаунтинг
+      .Nav__Link 
+        a(href="#") Услуги
+      .Nav__Link 
+        a(href="#") Стоимость
+      .Nav__Link 
+        a(href="#") Блог
+      .Nav__Link 
+        a(href="#") О нас
+      .Nav__Link 
+        a(href="#") Контакты
+    button(data-callOrder).CallOrder Заказать звонок

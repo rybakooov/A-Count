@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="assets/styles/app.css"/>
+    <link rel="icon" type="image/svg+xml" href="assets/images/Favicon.svg"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <script type="text/javascript" src="assets/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/Header.js"></script>
+    <script type="text/javascript" src="assets/scripts/slick.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/main.js"></script>
+    <script type="text/javascript" src="assets/scripts/Popup.js"></script>
+    <!-- validataion-->
+    <script type="text/javascript" src="assets/scripts/supaform.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/Validation.js"></script>
+    <!-- if price page-->
+    <script type="text/javascript" src="assets/scripts/price.js"></script>
+    <!-- if price page END-->
+    <!-- MAPBOX if "contacts"-->
+    <script type="text/javascript" src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.1/mapbox-gl-language.js"></script>
+    <!-- MAPBOX if "contacts" END-->
+    <title> Об аккаунтинге | A-count
+    </title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header class="Header">
+        <div class="container"><a class="Logo" href="/"><img src="assets/images/Logo.svg" alt="Логотип A-count"/></a>
+          <div class="HeaderInfo">
+            <div class="HeaderInfo-City">
+              <div class="HeaderInfo-City__Bg"></div><svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L3 3L5 1" stroke="#0F0F0F" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+              <div class="HeaderInfo-City__El HeaderInfo-City__El_active" data-phoneNum="0">Москва</div>
+              <div class="HeaderInfo-City__El" data-phoneNum="1">Симферополь</div>
+              <div class="HeaderInfo-City__El" data-phoneNum="2">Чебаркуль</div>
+            </div>
+            <div class="HeaderInfo-Phones"><a class="HeaderInfo__Phone HeaderInfo__Phone_active" href="tel: 8 (499) 189-78-70" data-phoneNum="0">8 (499) 189-78-70</a><a class="HeaderInfo__Phone" href="tel: 8 (499) 189-78-71" data-phoneNum="1">8 (499) 189-78-71</a><a class="HeaderInfo__Phone" href="tel: 8 (499) 189-78-72" data-phoneNum="2">8 (499) 189-78-72</a></div>
+          </div>
+          <nav class="Nav">
+            <div class="Nav__Link"> <a href="#">Аккаунтинг</a></div>
+            <div class="Nav__Link"> <a href="#">Услуги</a></div>
+            <div class="Nav__Link"> <a href="#">Стоимость</a></div>
+            <div class="Nav__Link"> <a href="#">Блог</a></div>
+            <div class="Nav__Link"> <a href="#">О нас</a></div>
+            <div class="Nav__Link"> <a href="#">Контакты</a></div>
+          </nav>
+          <button class="CallOrder" data-callOrder="data-callOrder">Заказать звонок</button>
+        </div>
+      </header>
+      <main class="Main">
+        <section class="aBanner">
+          <div class="container">
+            <div class="aBanner-Desc">
+              <h1 class="aBanner-Desc__Title">Аккаунтинг — больше, чем просто бухгалтерия</h1>
+              <p class="aBanner-Desc__Text">Единое решение для бухгалтерии, а также помощь в финансовых и юридических вопросах</p><a class="aBanner-Desc__More" href="#">Узнать больше</a>
+            </div><img class="aBanner__Img" src="assets/images/aBanner.svg" alt="Аккаунтинг — больше, чем просто бухгалтерия"/>
+          </div>
+        </section>
+        <section class="aItems">
+          <div class="container">
+            <div class="AboutItem"><img src="assets/images/Specialists.svg" alt="Разнопрофильные специалисты A-Count"/>
+              <p class="AboutItem__Title">Разнопрофильные <br>специалисты</p>
+              <p class="AboutItem__Text">Компетенций достаточно для того, <br>чтобы закрыть потребности бизнеса, связанные с полным спектром <br>бухгалтерских работ, а также смежных областей</p>
+            </div>
+            <div class="AboutItem"><img src="assets/images/Manager.svg" alt="Личный аккаунт менеджер A-Count"/>
+              <p class="AboutItem__Title">Личный аккаунт менеджер</p>
+              <p class="AboutItem__Text">Персональный помощник, находящийся в курсе текущей ситуации Вашего бизнеса <br>и координирующий работу остальных доступных Вам специалистов</p>
+            </div>
+            <div class="AboutItem"><img src="assets/images/PieChart.svg" alt="Оптимизация расходов A-Count"/>
+              <p class="AboutItem__Title">Оптимизация расходов</p>
+              <p class="AboutItem__Text">Вам не нужно платить зарплату и налоги за сотрудника, а так же обеспечивать ему рабочее место в офисе. Одна фиксированная плата за все услуги</p>
+            </div>
+            <div class="AboutItem"><img src="assets/images/Process.svg" alt="Настроенный процесс работы с клиентом A-Count"/>
+              <p class="AboutItem__Title">Настроенный процесс <br>работы с клиентом</p>
+              <p class="AboutItem__Text">Мы выстроили процесс взаимодействия таким образом, чтобы клиент мог решать задачи удобным для себя способом</p>
+            </div>
+          </div>
+        </section>
+        <section class="Manager">
+          <div class="container">
+            <h2 class="Manager__Title">Ваш аккаунт <br>менеджер</h2>
+            <div class="Manager-Desc">
+              <p class="Manager-Desc__Text">Мы понимаем, что человек обеспечивающий слаженную работу команды на пользу Вашему бизнесу должен обладать соответствующим опытом и навыками</p>
+              <p class="Manager-Desc__Subtitle">Навыки</p>
+              <ul class="Manager-Desc-Ul">
+                <li class="Manager-Desc-Ul__Li">Высшее образования</li>
+                <li class="Manager-Desc-Ul__Li">Навыки управленца</li>
+                <li class="Manager-Desc-Ul__Li">Опыт участия в налоговых спорах и арбитражных судах</li>
+                <li class="Manager-Desc-Ul__Li">Стаж не меньше 5 лет в крупных компаниях</li>
+                <li class="Manager-Desc-Ul__Li">Прохождение тренингов не менее 48 часов каждый год</li>
+                <li class="Manager-Desc-Ul__Li">Бухгалтерская аттестация</li>
+              </ul>
+              <p class="Manager-Desc__Subtitle">Задачи
+                <ul class="Manager-Desc-Ul">
+                  <li class="Manager-Desc-Ul__Li">Всегда находится на связи со своим клиентом</li>
+                  <li class="Manager-Desc-Ul__Li">Координировать работу других специалистов</li>
+                  <li class="Manager-Desc-Ul__Li">Проявлять инициативу для решения бизнес-задач</li>
+                  <li class="Manager-Desc-Ul__Li">Планировать финансовое развитие Вашей компании</li>
+                </ul>
+              </p>
+              <p class="Manager-Desc__Under">А так же многое другое для Вашего развития</p>
+            </div><img class="Manager__Img" src="assets/images/PersonalManager.svg" alt="Ваш аккаунт менеджер"/>
+          </div>
+        </section>
+        <section class="HowItWork">
+          <div class="container">
+            <div class="HowItWork-Head">
+              <h3 class="HowItWork-Head__Title">Как происходит <br>взаимодействие?</h3>
+              <p class="HowItWork-Head__Text">В работе с клиентом участвуют 3 разных офиса, а также курьерская служба при необходимости доставки документов.</p>
+            </div>
+          </div>
+          <div class="HowItWork-Body">
+            <div class="container">
+              <div class="HowItWork-Body-Item">
+                <p class="HowItWork-Body-Item__Title">Фронт офис</p>
+                <p class="HowItWork-Body-Item__Text">Место для переговоров, встреч и решения задач с Вашим личным аккаунт менеджером</p>
+              </div>
+              <div class="HowItWork-Body-Item">
+                <p class="HowItWork-Body-Item__Title">Бэк офис</p>
+                <p class="HowItWork-Body-Item__Text">Все специлисты в одном месте для помощи Вашему бизнесу доступны для контакта онлайн и по телефону</p>
+              </div>
+              <div class="HowItWork-Body-Item">
+                <p class="HowItWork-Body-Item__Title">Дроп офис</p>
+                <p class="HowItWork-Body-Item__Text">Ваши документы в одном месте для быстрого доступа Вам и любому необходимому специалисту</p>
+              </div>
+              <div class="HowItWork-Body-Item">
+                <p class="HowItWork-Body-Item__Title">Курьерская служба</p>
+                <p class="HowItWork-Body-Item__Text">Доставим все необходимые документы для Вас, Ваших клиентов и государственных органов</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="Doubts">
+          <div class="container">
+            <h3 class="Doubts__Title">Сомневаетесь? <br>— Не стоит</h3>
+            <ol class="Doubts-Body">
+              <li class="Doubts-Body-Item">
+                <p class="Doubts-Body-Item__Title">Экспертиза</p>
+                <p class="Doubts-Body-Item__Text">Среди наших клиентов находится большее количество направлений <br>бизнеса со своей финансовой спецификой, что помогает нам эффективно <br>выстроить работу в независимости от того, чем Вы занимаетесь</p>
+              </li>
+              <li class="Doubts-Body-Item">
+                <p class="Doubts-Body-Item__Title">Саморазвитие</p>
+                <p class="Doubts-Body-Item__Text">По мере развития технологий и изменения законодательства мы <br>регламентированно проводим повышение квалификации сотрудников <br>и совершенствования технической базы компании</p>
+              </li>
+              <li class="Doubts-Body-Item">
+                <p class="Doubts-Body-Item__Title">Многолетний опыт</p>
+                <p class="Doubts-Body-Item__Text">Пройдя через череду корректировок и улучшений мы выстроили <br>бизнес процессы таким образом, что быть эффективными и <br>финансово полезными для клинета</p>
+              </li>
+              <li class="Doubts-Body-Item">
+                <p class="Doubts-Body-Item__Title">Личная заинтересованность</p>
+                <p class="Doubts-Body-Item__Text">Мы зарабатываем на том, что Ваш бизнес растет и развивается, <br>поэтому в наших интересах сделать для этого все возможное</p>
+              </li>
+            </ol><img class="Doubts__Img" src="assets/images/Doubts.svg" alt="Сомневаетесь? — Не стоит A-Count"/>
+          </div>
+        </section>
+        <section class="Form">
+          <div class="container">
+            <div class="Form-Head">
+              <h6 class="Form-Head__Title">Давайте развивать <br>Ваш бизнес вместе</h6>
+              <p class="Form-Head__Text">Пишите на почту <a href="mailto: info@a-count.ru">info@a-count.ru</a> <br>и звоните по телефону <a href="tel: +7 (499) 189-78-70">+7 (499) 189-78-70</a></p>
+            </div>
+            <form class="Form-Body">
+              <label class="Form-Body-Label">
+                <p>Имя <span>*</span></p>
+                <input type="text" data-required="data-required" id="userName" placeholder="Иван Иванов"/>
+              </label>
+              <label class="Form-Body-Label">
+                <p>Телефон <span>*</span></p>
+                <input type="text" data-type="tel" data-required="data-required" id="userPhone" placeholder="8 (999) 999-99-99"/>
+              </label>
+              <label class="Form-Body-Label">
+                <p>E-mail <span>*</span></p>
+                <input type="text" data-type="email" data-required="data-required" id="userEmail" placeholder="ivan@mail.ru"/>
+              </label>
+              <label class="Form-Body-Label">
+                <p>Компания</p>
+                <input type="text" id="userCompany" placeholder="ООО “Ромашка”"/>
+              </label>
+              <label class="Form-Body-Label">
+                <p>Сообщение</p>
+                <input type="text" id="userMessage" placeholder="Хочу уйти от штатной бухгалтерии"/>
+              </label>
+              <label class="Form-Body-CheckboxLabel">
+                <input type="checkbox" data-required="data-required" checked="checked"/>
+                <div class="Form-Body-CheckboxLabel__Mark"></div>
+                <p>Я согласен с политикой конфиденциальности</p>
+              </label>
+              <button class="Form__Submit" onclick="submitForm(this, event)">Отправить сообщение</button>
+            </form><img class="Form__Img" src="assets/images/Form.svg" alt="Давайте развивать Ваш бизнес вместе A-Count"/>
+          </div>
+        </section>
+      </main>
+      <footer class="Footer">
+        <div class="container">
+          <div class="FooterMain"><a class="Logo" href="/"><img src="assets/images/Logo.svg" alt="Логотип A-count"/></a>
+            <div class="GeoBlock">
+              <p class="GeoBlock__Title">Москва</p>
+              <p class="GeoBlock__Text">129323 г. Москва, проезд Серебрякова, 3</p><a class="GeoBlock__Text" href="tel: 8 (499) 189-78-70">8 (499) 189-78-70</a><a class="GeoBlock__Text" href="mailto: ryabonenko@a-count.net">ryabonenko@a-count.net</a>
+            </div>
+            <div class="GeoBlock">
+              <p class="GeoBlock__Title">Крым</p>
+              <p class="GeoBlock__Text">г. Симферополь, Проспект Победы, д. 28 А, офис 609</p><a class="GeoBlock__Text" href="tel: 8 (978) 8000-373">8 (978) 8000-373</a><a class="GeoBlock__Text" href="mailto: crimea@a-count.net">crimea@a-count.net</a>
+            </div>
+            <div class="Social">
+              <p class="Social__Title">Социальные сети</p><a class="Social__Link Social__Link_vk" href="#">ВКонтакте</a><a class="Social__Link Social__Link_fb" href="#">Facebook</a><a class="Social__Link Social__Link_tg" href="#">Telegram</a>
+            </div>
+          </div>
+          <div class="FooterUnder">
+            <p class="Rights">© 2020 A.Count | Все права защищены</p><a class="Policity" href="#">Политика конфиденциальности</a>
+            <p class="RybaCode">Сделано с любовью в <a href="#">RybaСode</a></p>
+          </div>
+        </div>
+      </footer>
+      <form class="FormPopup">
+        <p class="FormPopup__Title">Заказать звонок</p>
+        <div class="FormPopup-Row">
+          <label class="Form-Body-Label">
+            <p>Имя <span>*</span></p>
+            <input type="text" data-required="data-required" id="popupUserName" placeholder="Иван Иванов"/>
+          </label>
+          <label class="Form-Body-Label">
+            <p>Телефон <span>*</span></p>
+            <input type="text" data-type="tel" data-required="data-required" id="popupUserPhone" placeholder="8 (999) 999-99-99"/>
+          </label>
+          <label class="Form-Body-Label">
+            <p>Сообщение</p>
+            <input type="text" id="popupUserMessage" placeholder="Хочу уйти от штатной бухгалтерии"/>
+          </label>
+        </div>
+        <div class="FormPopup-Row-Bot">
+          <button class="Form__Submit" onclick="submitForm(this, event)">Отправить сообщение</button>
+          <label class="Form-Body-CheckboxLabel">
+            <input type="checkbox" checked="checked"/>
+            <div class="Form-Body-CheckboxLabel__Mark"></div>
+            <p>Я согласен с политикой конфиденциальности</p>
+          </label>
+        </div>
+      </form>
+      <div class="SuccessForm">
+        <p class="SuccessForm__Title">Сообщение <br>отправлено!</p><img class="SuccessForm__Img" src="assets/images/Success.svg" alt="Success A-Count"/>
+        <p class="SuccessForm__Text">Постараемся ответить, как можно скорее</p>
+      </div>
+    </div>
+  </body>
+</html>

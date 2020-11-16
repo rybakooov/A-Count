@@ -1,0 +1,74 @@
+.Contacts{
+  position: relative;
+  height: 924px;
+  display: flex;
+  align-items: center;
+  #ContactsMap{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+  }
+  .container{
+    width: 100%;
+  }
+  &-Info{
+    width: 50%;
+    &__Title{
+      @extend %h1;
+      margin-bottom: 40px;
+    }
+    &-Tabs{
+      display: flex;
+      margin-bottom: 40px;
+      &__Tab{
+        @extend %tabBtn;
+        &_active{
+          @extend %tabBtnActive;
+        }
+        &:not(:last-child){
+          margin-right: 16px;
+        }
+      }
+    }
+    &-Body{
+      &-Block{
+        display: none;
+        &_active{
+          display: block;
+        }
+      }
+      &-Item{
+        &_phone{
+          .Contacts-Info-Body-Item-Wrap{
+            display: flex;
+            flex-wrap: wrap;
+            margin: -8px;
+            width: calc(100% + 16px);
+          }
+          .Contacts-Info-Body-Item__Text{
+            width: calc(50% - 16px);
+            margin: 8px;
+          }
+        }
+        &__Title{
+          @extend %text;
+          margin-bottom: 16px;
+          color: var(--dark-gray);
+        }
+        &__Text{
+          @extend %text;
+          display: flex;
+          align-items: center;
+          svg{
+            margin-right: 8px;
+          }
+        }
+        &:not(:last-child){
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+}

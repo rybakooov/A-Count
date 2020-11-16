@@ -1,0 +1,128 @@
+extends ../template
+block title
+  | Главная | A-count
+block variables
+  - var casesTitle = 'Истории успеха'
+block content
+  section.Banner
+    .container
+      .Banner-Desc
+        h1.Banner-Desc__Title Ведение бухгалтерии<br> и помощь в решении <br>финансовых задач
+        p.Banner-Desc__Text Мы выполняем задачи&nbsp;
+          span бухгалтерии
+          | ,
+          span налогов
+          | ,
+          span кадров
+          | , <br>
+          span юриспруденции
+          | ,
+          span планирования
+          | &nbsp;и других областей
+        .Banner-Desc-Buttons
+          a(href="#").Banner-Desc-Buttons__Rates Выбрать тариф
+          a(href="#").Banner-Desc-Buttons__About Об аккаунтинге
+
+      .Banner-Img
+        img(src="assets/images/Banner.svg", alt="Ведение бухгалтерии и помощь в решении финансовых задач A-Count")
+  section.About
+    .container
+      .About-Desc
+        h2.About-Desc__Title Что такое аккаунтинг
+        p.About-Desc__Text Это сервис для бизнеса, который решает задачи бухгалтерии, налогов, кадров, юриспруденции, бизнес-планирования и других смежных областей по тарифу, соответствующему текущим потребностям компании клиента.
+      .About-Items
+        .AboutItem
+          img(src="assets/images/Specialists.svg", alt="Разнопрофильные специалисты A-Count")
+          p.AboutItem__Title Разнопрофильные <br>специалисты
+          p.AboutItem__Text Компетенций достаточно для того, <br>чтобы закрыть потребности бизнеса, связанные с полным спектром <br>бухгалтерских работ, а также смежных областей
+        .AboutItem
+          img(src="assets/images/Manager.svg", alt="Личный аккаунт менеджер A-Count")
+          p.AboutItem__Title Личный аккаунт менеджер
+          p.AboutItem__Text Персональный помощник, находящийся в курсе текущей ситуации Вашего бизнеса <br>и координирующий работу остальных доступных Вам специалистов
+        .AboutItem
+          img(src="assets/images/PieChart.svg", alt="Оптимизация расходов A-Count")
+          p.AboutItem__Title Оптимизация расходов
+          p.AboutItem__Text Вам не нужно платить зарплату и налоги за сотрудника, а так же обеспечивать ему рабочее место в офисе. Одна фиксированная плата за все услуги
+        .AboutItem
+          img(src="assets/images/Process.svg", alt="Настроенный процесс работы с клиентом A-Count")
+          p.AboutItem__Title Настроенный процесс <br>работы с клиентом
+          p.AboutItem__Text Мы выстроили процесс взаимодействия таким образом, чтобы клиент мог решать задачи удобным для себя способом
+      .About-Video
+        p.About-Video__Text За 2 минуты расскажем, что такое аккаунтинг
+        <iframe class="PopupVideo" width="896" height="504" src="https://www.youtube.com/embed/7lG4zHN_f8g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        button(data-video).About-Video__Link
+          <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1.83167C1 1.0405 1.87525 0.562658 2.54076 0.990487L12.1359 7.15882C12.7483 7.55246 12.7483 8.44754 12.1359 8.84118L2.54076 15.0095C1.87525 15.4373 1 14.9595 1 14.1683V1.83167Z" fill="white" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          | Смотреть видео
+  section.Services
+    .container
+      h3.Services__Title Что входит <br>в наши услуги
+      .Services-List
+        .ServicesItem
+          .ServicesItem-Head
+            p.ServicesItem-Head__Title Полный спектр бухгалтерских и финансовых работ <br>+ консалтинг в смежных областях
+            .ServicesItem-Head__Plus
+          p.ServicesItem-Body Все бухгалтерские услуги в Москве для любого типа Бизнеса по цене штатного специалиста
+        .ServicesItem
+          .ServicesItem-Head
+            p.ServicesItem-Head__Title Виртуальный кабинет + виртуальный офис
+            .ServicesItem-Head__Plus
+          p.ServicesItem-Body Современная «безбумажная» бухгалтерия оставляет больше рабочего места и времени для Вашего бизнеса
+        .ServicesItem
+          .ServicesItem-Head
+            p.ServicesItem-Head__Title Комфортный фронт-офис для рабочих встреч <br>+ дроп-офис для обмена документами
+            .ServicesItem-Head__Plus
+          p.ServicesItem-Body Всегда удобные условия работы, даже в случае «безофисного» бизнеса клиента
+        .ServicesItem
+          .ServicesItem-Head
+            p.ServicesItem-Head__Title Курьерская служба для рабочего взаимодействия
+            .ServicesItem-Head__Plus
+          p.ServicesItem-Body Мы заберем и доставим документы, независимо от их объема
+        .ServicesItem
+          .ServicesItem-Head
+            p.ServicesItem-Head__Title Постоянно действующий делопроизводственный Бэк-офис
+            .ServicesItem-Head__Plus
+          p.ServicesItem-Body Мы занимаемся бухгалтерским сопровождением без задержек и перерывов
+        .ServicesItem
+          .ServicesItem-Head
+            p.ServicesItem-Head__Title Персональный аккаунт-менеджер для каждого клиента
+            .ServicesItem-Head__Plus
+          p.ServicesItem-Body Одно контактное лицо по всем вопросам и направлениям
+        a(href="#").Services__Link Смотреть все услуги
+      img(src="assets/images/WomanBoard.svg", alt="Девушка у доски A-Count").Services__Img
+  include ../common/Price
+  section.Whom
+    .container
+      .Whom-Head
+        h4.Whom-Head__Title Кому мы подходим
+        p.Whom-Head__Text Если указанные ниже пункты подходят под Вашу организацию, Вы можете быть уверены в качестве и полноте объема получаемых услуг.
+      .Whom-List
+        p.Whom-List-Switch Мы
+          button.Whom-List-Switch__Btn.Whom-List-Switch__Btn_active сможем
+          button.Whom-List-Switch__Btn не сможем
+          | &nbsp;работать c Вами, если Вы
+        .Whom-List__Item
+          p Выручка более 10 млн. рублей в месяц
+          p Бизнес, который хочет получить высококлассного бухгалтера
+        .Whom-List__Item
+          p Бизнес по продаже алкоголя
+          p Не хотите сдавать отчетность самостоятельно
+        .Whom-List__Item
+          p Бизнес по аренде автотранспорта
+          p Хотите забыть про головную боль
+        .Whom-List__Item
+          p Ресторанный бизнес
+          p Имеете существующий бизнес с выручкой 200 тыс. — 10 млн. руб/мес
+        .Whom-List__Item
+          p Есть теневая экономика, которую хочет переложить на бухгалтера
+          p Импортируете или экспортируете
+        .Whom-List__Item
+          p Необходимо подделывать документы за поставщиков
+          p Новый или начинающий бизнес
+        .Whom-List__Item
+          p Необходима обналичка
+          p Имеете штат до 100 сотрудников
+      img(src="assets/images/Persons.svg" alt="Люди A-Count").Whom__Img
+  include ../common/Cases
+  include ../common/Form

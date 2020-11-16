@@ -1,0 +1,210 @@
+:root{
+  --black: #0F0F0F;
+  --dark-gray: #4E4E4E;
+  --light-blue: #F5F7FA;
+  --cherry: #B5076B;
+  --mid-light-gray: #CDCDCD;
+  --mid-gray: #898989;
+  --light-gray: #D6D6D6;
+  --about-white: #F7F7F7;
+  --purple: #5C2A9D;
+  --light-purple: #C6B5DD;
+  --hover-cherry: #D0107F;
+  --active-cherry: #A40460;
+  --light-cherry: #E5A8CB;
+  --red: #FE346E;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+%small-text{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 115%;
+}
+
+%small-text-wide {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+%big-text{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+%black-btn{
+  @extend %small-text;
+  padding: 10px 16px;
+  border: 1px solid #0F0F0F;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  @include hoverMixin() {
+    background-color: var(--light-blue);
+  }
+}
+
+%black-btn_cherryHover{
+  @extend %small-text;
+  padding: 10px 16px;
+  border: 1px solid #0F0F0F;
+  border-radius: 4px;
+  @include hoverMixin() {
+    border-color: var(--cherry);
+    color: var(--cherry);
+  }
+}
+
+%cherry-btn{
+  @extend %small-text;
+  color: #FFFFFF;
+  border: 1px solid var(--cherry);
+  background-color: var(--cherry);
+  padding: 10px 16px;
+  box-shadow: 0px 8px 16px rgba(64, 0, 130, 0.2);
+  border-radius: 4px;
+  @include hoverMixin() {
+    background-color: var(--hover-cherry);
+    border-color: var(--hover-cherry);
+  }
+  &:active{
+    @media screen and (min-width: 1024px){
+      background-color: var(--active-cherry);
+      border-color: var(--active-cherry);
+    }
+  }
+}
+
+%h1{
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 120%;
+}
+
+%text{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+
+%grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  grid-template-areas:  "LT LT LT LT LT R R R R R R R"
+                        "LB LB LB LB LB R R R R R R R";
+}
+
+%grid-OneRow{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  grid-template-areas:  "L L L L L R R R R R R R"
+}
+
+%tabBtn{
+  padding: 4px 16px;
+  @extend %big-text;
+  border: 1px solid var(--mid-gray);
+  border-radius: 4px;
+  color: var(--mid-gray);
+  background-color: transparent;
+  cursor: pointer;
+  @include hoverMixin(){
+    border-color: var(--light-cherry);
+    background-color: var(--light-cherry);
+    color: #fff;
+  }
+}
+%tabBtnActive{
+  background-color: var(--cherry);
+  border-color: var(--cherry);
+  color: #fff;
+  &:hover{
+    background-color: var(--cherry);
+    border-color: var(--cherry);
+    color: #fff;
+  }
+}
+
+
+.input-err{
+  border-color: var(--red) !important;
+}
+.input-border{
+  border-color: var(--black) !important;
+}
+
+* {
+  font-family: 'Gilroy';
+  color: var(--black);
+}
+
+iframe{
+  display: block;
+}
+
+.container{
+  max-width: calc(1400px);
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.goBack{
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  @extend %text;
+  color: var(--mid-gray);
+  margin-bottom: 56px;
+  @include hoverMixin(){
+    color: var(--dark-gray);
+  }
+  &:hover svg path{
+    @media screen and (min-width: 1024px){
+      stroke: var(--dark-gray);
+    }
+  }
+  svg{
+    margin-right: 8px;
+    path{
+      transition: .3s;
+    }
+  }
+}
+
+.Main{
+  flex: 1;
+  position: relative;
+}
+
+
+.Sitemap{
+  padding-top: 120px;
+  .container{
+    table{
+      border-collapse: collapse;
+      td{
+        border: 1px solid #000;
+        a{
+          padding: 13px 28px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

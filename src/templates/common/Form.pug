@@ -1,0 +1,27 @@
+section.Form
+  .container
+    .Form-Head
+      h6.Form-Head__Title Давайте развивать <br>Ваш бизнес вместе
+      p.Form-Head__Text Пишите на почту <a href="mailto: info@a-count.ru">info@a-count.ru</a> <br>и звоните по телефону <a href="tel: +7 (499) 189-78-70">+7 (499) 189-78-70</a>
+    form.Form-Body
+      label.Form-Body-Label
+        p Имя <span>*</span>
+        input(type="text" data-required id="userName" placeholder="Иван Иванов")
+      label.Form-Body-Label
+        p Телефон <span>*</span>
+        input(type="text" data-type="tel" data-required id="userPhone" placeholder="8 (999) 999-99-99")
+      label.Form-Body-Label
+        p E-mail <span>*</span>
+        input(type="text" data-type="email" data-required id="userEmail" placeholder="ivan@mail.ru")
+      label.Form-Body-Label
+        p Компания
+        input(type="text" id="userCompany" placeholder="ООО “Ромашка”")
+      label.Form-Body-Label
+        p Сообщение
+        input(type="text" id="userMessage" placeholder="Хочу уйти от штатной бухгалтерии")
+      label.Form-Body-CheckboxLabel
+        input(type="checkbox" data-required checked)
+        .Form-Body-CheckboxLabel__Mark
+        p Я согласен с политикой конфиденциальности
+      button(onclick="submitForm(this, event)").Form__Submit Отправить сообщение
+    img(src="assets/images/Form.svg" alt="Давайте развивать Ваш бизнес вместе A-Count").Form__Img

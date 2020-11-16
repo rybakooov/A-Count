@@ -1,0 +1,20 @@
+.notFound{
+  background-color: var(--light-blue);
+  height: 100%;
+  padding-top: 115px;
+  padding-bottom: 40px;
+  height: calc(100vh - 68px);
+  height: calc(var(--vh, 1vh) * 100 - 68px);
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  img{
+    max-width: 100%;
+  }
+  a{
+    margin-top: 80px;
+    @extend %black-btn_cherryHover;
+  }
+}

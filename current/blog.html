@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="assets/styles/app.css"/>
+    <link rel="icon" type="image/svg+xml" href="assets/images/Favicon.svg"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <script type="text/javascript" src="assets/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/Header.js"></script>
+    <script type="text/javascript" src="assets/scripts/slick.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/main.js"></script>
+    <script type="text/javascript" src="assets/scripts/Popup.js"></script>
+    <!-- validataion-->
+    <script type="text/javascript" src="assets/scripts/supaform.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/Validation.js"></script>
+    <!-- if price page-->
+    <script type="text/javascript" src="assets/scripts/price.js"></script>
+    <!-- if price page END-->
+    <!-- MAPBOX if "contacts"-->
+    <script type="text/javascript" src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.1/mapbox-gl-language.js"></script>
+    <!-- MAPBOX if "contacts" END-->
+    <title> Главная | A-count
+    </title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header class="Header">
+        <div class="container"><a class="Logo" href="/"><img src="assets/images/Logo.svg" alt="Логотип A-count"/></a>
+          <div class="HeaderInfo">
+            <div class="HeaderInfo-City">
+              <div class="HeaderInfo-City__Bg"></div><svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L3 3L5 1" stroke="#0F0F0F" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+              <div class="HeaderInfo-City__El HeaderInfo-City__El_active" data-phoneNum="0">Москва</div>
+              <div class="HeaderInfo-City__El" data-phoneNum="1">Симферополь</div>
+              <div class="HeaderInfo-City__El" data-phoneNum="2">Чебаркуль</div>
+            </div>
+            <div class="HeaderInfo-Phones"><a class="HeaderInfo__Phone HeaderInfo__Phone_active" href="tel: 8 (499) 189-78-70" data-phoneNum="0">8 (499) 189-78-70</a><a class="HeaderInfo__Phone" href="tel: 8 (499) 189-78-71" data-phoneNum="1">8 (499) 189-78-71</a><a class="HeaderInfo__Phone" href="tel: 8 (499) 189-78-72" data-phoneNum="2">8 (499) 189-78-72</a></div>
+          </div>
+          <nav class="Nav">
+            <div class="Nav__Link"> <a href="#">Аккаунтинг</a></div>
+            <div class="Nav__Link"> <a href="#">Услуги</a></div>
+            <div class="Nav__Link"> <a href="#">Стоимость</a></div>
+            <div class="Nav__Link"> <a href="#">Блог</a></div>
+            <div class="Nav__Link"> <a href="#">О нас</a></div>
+            <div class="Nav__Link"> <a href="#">Контакты</a></div>
+          </nav>
+          <button class="CallOrder" data-callOrder="data-callOrder">Заказать звонок</button>
+        </div>
+      </header>
+      <main class="Main">
+        <section class="BlogBanner">
+          <div class="container">
+            <div class="BlogBanner-Desc">
+              <h2 class="BlogBanner-Desc__Title">Вдохновляющие истории, <br>наилучшие практики <br>и новости сообщества</h2>
+              <p class="BlogBanner-Desc__Text">Подпишитесь и получайте лучшие статьи недели на e-mail</p>
+              <form class="BlogBanner-Desc-Sub">
+                <input type="text" placeholder="E-mail"/>
+                <button type="submit">Подписаться</button>
+              </form>
+            </div><img class="BlogBanner__Img" src="assets/images/blogBanner.svg" alt="Блог | Аккаунт"/>
+          </div>
+        </section>
+        <section class="Blog">
+          <div class="container">
+            <section class="Blog-Head">
+              <h1 class="Blog-Head__Title">Статьи</h1>
+              <form class="Blog-Head-Filter">
+                <label class="Blog-Head-Filter-Item">
+                  <input type="radio" name="blogFilter" value="all" checked="checked"/>
+                  <div class="Blog-Head-Filter-Item__Button">Все</div>
+                </label>
+                <label class="Blog-Head-Filter-Item">
+                  <input type="radio" name="blogFilter" value="all1"/>
+                  <div class="Blog-Head-Filter-Item__Button">Оптовая торговля</div>
+                </label>
+                <label class="Blog-Head-Filter-Item">
+                  <input type="radio" name="blogFilter" value="all2"/>
+                  <div class="Blog-Head-Filter-Item__Button">Организация праздников</div>
+                </label>
+                <label class="Blog-Head-Filter-Item">
+                  <input type="radio" name="blogFilter" value="all3"/>
+                  <div class="Blog-Head-Filter-Item__Button">Экстрим туризм</div>
+                </label>
+                <label class="Blog-Head-Filter-Item">
+                  <input type="radio" name="blogFilter" value="all4"/>
+                  <div class="Blog-Head-Filter-Item__Button">Импорт оборудования</div>
+                </label>
+                <label class="Blog-Head-Filter-Item">
+                  <input type="radio" name="blogFilter" value="all5"/>
+                  <div class="Blog-Head-Filter-Item__Button">Организация праздников</div>
+                </label>
+                <label class="Blog-Head-Filter-Item">
+                  <input type="radio" name="blogFilter" value="all6"/>
+                  <div class="Blog-Head-Filter-Item__Button">Экстрим туризм</div>
+                </label>
+                <label class="Blog-Head-Filter-Item">
+                  <input type="radio" name="blogFilter" value="all7"/>
+                  <div class="Blog-Head-Filter-Item__Button">Экстрим туризм</div>
+                </label>
+                <label class="Blog-Head-Filter-Item">
+                  <input type="radio" name="blogFilter" value="all8"/>
+                  <div class="Blog-Head-Filter-Item__Button">Экстрим туризм</div>
+                </label>
+                <label class="Blog-Head-Filter-Item">
+                  <input type="radio" name="blogFilter" value="all9"/>
+                  <div class="Blog-Head-Filter-Item__Button">Экстрим туризм</div>
+                </label>
+                <button class="Blog-Head-Filter__More"><svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L4 4L7 1" stroke="#898989" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </button>
+              </form>
+            </section>
+            <section class="Blog-Body"><a class="Blog-Item" href="#">
+                <div class="Blog-Item-Desc">
+                  <p class="Blog-Item-Desc__Title">Что нового в налоговом <br>учете с 2020 года</p>
+                  <div class="Blog-Item-Desc-Sub">
+                    <time>26.12.2019</time>
+                    <p class="Blog-Item-Desc-Sub-Tags"><span>Налоги</span>,<span>Законодательство</span></p>
+                  </div>
+                  <p class="Blog-Item-Desc__Text">Очередной закон № 325-ФЗ от 29 сентября 2019 года внес многочисленные поправки в Налоговый Кодекс Российской Федерации.</p>
+                  <button class="Blog-Item-Desc__Btn">Читать статью</button>
+                </div>
+                <div class="Blog-Item-Img"><img src="assets/images/Post/post.png"/></div></a><a class="Blog-Item" href="#">
+                <div class="Blog-Item-Desc">
+                  <p class="Blog-Item-Desc__Title">Что нового в налоговом <br>учете с 2020 года</p>
+                  <div class="Blog-Item-Desc-Sub">
+                    <time>26.12.2019</time>
+                    <p class="Blog-Item-Desc-Sub-Tags"><span>Налоги</span>,<span>Законодательство</span></p>
+                  </div>
+                  <p class="Blog-Item-Desc__Text">Очередной закон № 325-ФЗ от 29 сентября 2019 года внес многочисленные поправки в Налоговый Кодекс Российской Федерации.</p>
+                  <button class="Blog-Item-Desc__Btn">Читать статью</button>
+                </div>
+                <div class="Blog-Item-Img"><img src="assets/images/Post/post.png"/></div></a><a class="Blog-Item" href="#">
+                <div class="Blog-Item-Desc">
+                  <p class="Blog-Item-Desc__Title">Что нового в налоговом <br>учете с 2020 года</p>
+                  <div class="Blog-Item-Desc-Sub">
+                    <time>26.12.2019</time>
+                    <p class="Blog-Item-Desc-Sub-Tags"><span>Налоги</span>,<span>Законодательство</span></p>
+                  </div>
+                  <p class="Blog-Item-Desc__Text">Очередной закон № 325-ФЗ от 29 сентября 2019 года внес многочисленные поправки в Налоговый Кодекс Российской Федерации.</p>
+                  <button class="Blog-Item-Desc__Btn">Читать статью</button>
+                </div>
+                <div class="Blog-Item-Img"><img src="assets/images/Post/post.png"/></div></a><a class="Blog-Item" href="#">
+                <div class="Blog-Item-Desc">
+                  <p class="Blog-Item-Desc__Title">Что нового в налоговом <br>учете с 2020 года</p>
+                  <div class="Blog-Item-Desc-Sub">
+                    <time>26.12.2019</time>
+                    <p class="Blog-Item-Desc-Sub-Tags"><span>Налоги</span>,<span>Законодательство</span></p>
+                  </div>
+                  <p class="Blog-Item-Desc__Text">Очередной закон № 325-ФЗ от 29 сентября 2019 года внес многочисленные поправки в Налоговый Кодекс Российской Федерации.</p>
+                  <button class="Blog-Item-Desc__Btn">Читать статью</button>
+                </div>
+                <div class="Blog-Item-Img"><img src="assets/images/Post/post.png"/></div></a></section>
+            <button class="Blog__More">Показать еще<span><svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L4 4L7 1" stroke="#898989" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span></button>
+          </div>
+        </section>
+      </main>
+      <footer class="Footer" style="background-color: var(--light-blue);">
+        <div class="container">
+          <div class="FooterMain"><a class="Logo" href="/"><img src="assets/images/Logo.svg" alt="Логотип A-count"/></a>
+            <div class="GeoBlock">
+              <p class="GeoBlock__Title">Москва</p>
+              <p class="GeoBlock__Text">129323 г. Москва, проезд Серебрякова, 3</p><a class="GeoBlock__Text" href="tel: 8 (499) 189-78-70">8 (499) 189-78-70</a><a class="GeoBlock__Text" href="mailto: ryabonenko@a-count.net">ryabonenko@a-count.net</a>
+            </div>
+            <div class="GeoBlock">
+              <p class="GeoBlock__Title">Крым</p>
+              <p class="GeoBlock__Text">г. Симферополь, Проспект Победы, д. 28 А, офис 609</p><a class="GeoBlock__Text" href="tel: 8 (978) 8000-373">8 (978) 8000-373</a><a class="GeoBlock__Text" href="mailto: crimea@a-count.net">crimea@a-count.net</a>
+            </div>
+            <div class="Social">
+              <p class="Social__Title">Социальные сети</p><a class="Social__Link Social__Link_vk" href="#">ВКонтакте</a><a class="Social__Link Social__Link_fb" href="#">Facebook</a><a class="Social__Link Social__Link_tg" href="#">Telegram</a>
+            </div>
+          </div>
+          <div class="FooterUnder">
+            <p class="Rights">© 2020 A.Count | Все права защищены</p><a class="Policity" href="#">Политика конфиденциальности</a>
+            <p class="RybaCode">Сделано с любовью в <a href="#">RybaСode</a></p>
+          </div>
+        </div>
+      </footer>
+      <form class="FormPopup">
+        <p class="FormPopup__Title">Заказать звонок</p>
+        <div class="FormPopup-Row">
+          <label class="Form-Body-Label">
+            <p>Имя <span>*</span></p>
+            <input type="text" data-required="data-required" id="popupUserName" placeholder="Иван Иванов"/>
+          </label>
+          <label class="Form-Body-Label">
+            <p>Телефон <span>*</span></p>
+            <input type="text" data-type="tel" data-required="data-required" id="popupUserPhone" placeholder="8 (999) 999-99-99"/>
+          </label>
+          <label class="Form-Body-Label">
+            <p>Сообщение</p>
+            <input type="text" id="popupUserMessage" placeholder="Хочу уйти от штатной бухгалтерии"/>
+          </label>
+        </div>
+        <div class="FormPopup-Row-Bot">
+          <button class="Form__Submit" onclick="submitForm(this, event)">Отправить сообщение</button>
+          <label class="Form-Body-CheckboxLabel">
+            <input type="checkbox" checked="checked"/>
+            <div class="Form-Body-CheckboxLabel__Mark"></div>
+            <p>Я согласен с политикой конфиденциальности</p>
+          </label>
+        </div>
+      </form>
+      <div class="SuccessForm">
+        <p class="SuccessForm__Title">Сообщение <br>отправлено!</p><img class="SuccessForm__Img" src="assets/images/Success.svg" alt="Success A-Count"/>
+        <p class="SuccessForm__Text">Постараемся ответить, как можно скорее</p>
+      </div>
+    </div>
+  </body>
+</html>
