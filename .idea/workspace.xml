@@ -1,7 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="306e8839-c104-4842-8514-83b255fa1e34" name="Default Changelist" comment="" />
+    <list default="true" id="306e8839-c104-4842-8514-83b255fa1e34" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/scripts/Body.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/current/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/current/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/current/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/current/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/current/assets/scripts/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/current/assets/scripts/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/current/assets/scripts/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/current/assets/scripts/Popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/current/assets/scripts/Validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/current/assets/scripts/Validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/current/assets/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/current/assets/scripts/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/current/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/current/assets/styles/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/current/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/current/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/current/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/current/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/current/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/current/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/current/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/current/post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/current/price.html" beforeDir="false" afterPath="$PROJECT_DIR$/current/price.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/current/servicePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/current/servicePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/current/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/current/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/current/sitemap.html" beforeDir="false" afterPath="$PROJECT_DIR$/current/sitemap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Post/Post.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Post/post.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/common/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/common/common.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/common/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/common/footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/common/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/common/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/common/popup.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/common/popup.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/pages/contacts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/pages/contacts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/pages/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/pages/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/pages/price.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/pages/price.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/common/Header.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/common/Header.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/pages/price.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/pages/price.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/template.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/template.pug" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +64,9 @@
         <option value="Pug File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1jIJMTGYmBTihaaLEhxyeVMSutL" />
   <component name="ProjectViewState">
@@ -43,11 +97,25 @@
       <workItem from="1605197792017" duration="75688000" />
       <workItem from="1605385716784" duration="1932000" />
       <workItem from="1605472554223" duration="11759000" />
+      <workItem from="1605619141525" duration="5467000" />
+      <workItem from="1605639193799" duration="10104000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1603486968251">
@@ -74,6 +142,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1603754116885" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1605623948720">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605623948720" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605366447939">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

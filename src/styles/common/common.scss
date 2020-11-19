@@ -63,6 +63,7 @@
   }
 }
 
+
 %cherry-btn{
   @extend %small-text;
   color: #FFFFFF;
@@ -88,6 +89,14 @@
   font-size: 40px;
   line-height: 120%;
 }
+@media screen and (max-width: 767px) {
+  %h1{
+    font-size: 24px;
+    line-height: 125%;
+  }
+}
+
+
 
 %text{
   font-weight: 500;
@@ -125,6 +134,17 @@
     color: #fff;
   }
 }
+
+@media screen and (max-width: 767px){
+  
+  %tabBtn{
+    padding: 4px 12px;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+
 %tabBtnActive{
   background-color: var(--cherry);
   border-color: var(--cherry);
@@ -206,5 +226,24 @@ iframe{
         }
       }
     }
+  }
+}
+
+
+@media screen and (max-width: 1023px) {
+  .goBack{
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .goBack{
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 150%;
   }
 }

@@ -1,8 +1,6 @@
 .Contacts{
   position: relative;
   height: 924px;
-  display: flex;
-  align-items: center;
   #ContactsMap{
     position: absolute;
     right: 0;
@@ -12,9 +10,11 @@
   }
   .container{
     width: 100%;
+    @extend %grid-OneRow;
   }
   &-Info{
-    width: 50%;
+    grid-area: L;
+    padding-top: 120px;
     &__Title{
       @extend %h1;
       margin-bottom: 40px;
@@ -52,6 +52,9 @@
             margin: 8px;
           }
         }
+        &_empty{
+          display: none;
+        }
         &__Title{
           @extend %text;
           margin-bottom: 16px;
@@ -68,6 +71,148 @@
         &:not(:last-child){
           margin-bottom: 40px;
         }
+      }
+    }
+  }
+}
+
+.Requisites{
+  padding: 120px 0;
+  .container{
+    @extend %grid-OneRow;
+  }
+  &__Title{
+    grid-area: L;
+    @extend %h1;
+  }
+  &-Right{
+    grid-area: R;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 40px 24px;
+  }
+  &-Item{
+    &__Title{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: var(--dark-gray);
+      margin-bottom: 16px;
+    }
+    &__Text{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #000;
+    }
+    &:nth-child(odd){
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+    &:nth-child(even){
+      grid-column-start: 5;
+      grid-column-end: 7;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1023px){
+  .Contacts{
+    height: auto;
+    #ContactsMap{
+      position: relative;
+      width: 100% !important;
+      left: 0 !important;
+      right: 0 !important;
+      top: 0 !important;
+      bottom: 0 !important;
+      height: 400px;
+    }
+    .container{
+      display: block;
+    }
+    &-Info{
+      padding-top: 40px;
+      &-Body{
+        &-Item{
+          &:not(:last-child){
+            margin-bottom: 0;
+          }
+        }
+      }
+      &-Body-Block_active{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        width: 100%;
+        .Contacts-Info-Body-Item_empty{
+          display: block;
+        }
+      }
+    }
+    
+  }
+  .Requisites{
+    .container{
+      display: block;
+    }
+    &__Title{
+      margin-bottom: 40px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 767px){
+  .Contacts{
+    height: auto;
+    padding-bottom: 64px;
+    border-bottom: 1px solid var(--about-white);
+    #ContactsMap{
+      height: 360px;
+    }
+    &-Info{
+      &__Title{
+        margin-bottom: 16px;
+      }
+      &-Body{
+        &-Item{
+          &__Title{
+            font-size: 14px;
+            line-height: 150%;
+          }
+          &__Text{
+            font-size: 14px;
+            line-height: 150%;
+          }
+        }
+      }
+      &-Body-Block_active{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .Contacts-Info-Body-Item_empty{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .Requisites{
+    padding: 64px 0 120px;
+    &-Right{
+      display: flex;
+      flex-direction: column;
+    }
+    &-Item{
+      &__Title{
+        font-size: 14px;
+        line-height: 150%;
+      } 
+      &__Text{
+        font-size: 14px;
+        line-height: 150%;
       }
     }
   }

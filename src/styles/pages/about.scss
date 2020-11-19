@@ -209,3 +209,252 @@
     grid-area: LB;
   }
 }
+
+
+@media screen and (max-width: 1023px){
+  .aBanner{
+    padding: 40px 0 120px;
+    .container{
+      flex-direction: column;
+      height: auto;
+      align-items: flex-start;
+    }
+    &__Img{
+      margin-bottom: 40px;
+      max-width: 560px;
+    }
+    &-Desc{
+      width: 100%;
+      margin-right: 0;
+      order: 2;
+      &__Text{
+        margin-bottom: 40px;
+      }
+      &__More{
+        display: inline-block;
+      }
+    }
+  }
+
+  .aItems{ 
+    padding: 80px 0;
+    .container{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px
+    }
+    .AboutItem{
+      width: 100%;
+      &:not(:last-child){
+        margin-right: 0;
+      }
+    }
+  }
+
+  .Manager{
+    .container{
+      display: block;
+    }
+    &__Title{
+      margin-bottom: 24px;
+    }
+    &__Img{
+      display: none;
+    }
+  }
+
+  .HowItWork{
+    &-Head{
+      display: block;
+      &__Text{
+        margin-top: 24px;
+
+      }
+      margin-bottom: 64px;
+    }
+    &-Body{
+      &:before{
+        display: none; 
+      }
+      .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 64px 24px;
+      }
+      &-Item{
+        max-width: 300px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        &:before{
+          margin-bottom: 0;
+        }
+        &__Title{
+          margin-left: 8px;
+          margin-bottom: 0;
+        }
+        &__Text{
+          margin-top: 16px;
+          width: 100%;
+          max-width: 100%;
+          display: block;
+        }
+        &:not(:last-child){
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .Doubts{
+    .container{
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: flex-start;
+    }
+    &__Img{
+      max-width: 560px;
+    }
+    &-Body{
+      order: 2;
+      max-width: 600px;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 767px){
+  .aBanner{
+    &__Img{
+      max-width: 280px;
+    }
+    &-Desc{
+      &__Title{
+        font-size: 24px;
+        line-height: 125%;
+        margin-bottom: 16px;
+      }
+      &__Text{
+        margin-bottom: 32px;
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
+  }
+  .aItems{
+    padding: 64px 0;
+    .container{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .Manager{
+    .container{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+    }
+    &-Desc{
+      order: 2;
+      &__Subtitle{
+        font-size: 16px;
+        line-height: 150%;
+      }
+      &__Text{
+        font-size: 14px;
+        line-height: 150%;
+      }
+      &-Ul{
+        &__Li{
+          font-size: 14px;
+          line-height: 150%;
+          &:not(:last-child){
+            margin-bottom: 24px;
+          }
+        }
+      }
+      &__Under{
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
+    &__Img{
+      display: block;
+      max-width: 280px;
+    }
+  }
+  .HowItWork{
+    padding: 64px 0;
+    &-Head{
+      margin-bottom: 40px;
+      &__Text{
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
+    &-Body{
+      padding: 0 24px 0 16px;
+      .container{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+      }
+      &-Item{
+        &:before{
+          height: 13px;
+          width: 13px;
+        }
+        position: relative;
+        max-width: none;
+        &__Title{
+          font-size: 16px;
+        }
+        &:not(:last-child){
+          padding-bottom: 40px;
+          &:after{
+            content: '';
+            height: 100%;
+            left: 6px;
+            top: 0;
+            width: 1px;
+            display: block;
+            position: absolute;
+            top: 13px;
+            z-index: -1;
+            background-color: var(--light-gray);
+          }
+        }
+        &__Text{
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+  .Doubts{
+    &__Img{
+      max-width: 328px;
+      width: 100%;
+    }
+    &-Body{
+      &-Item{
+        &__Title{
+          font-size: 16px;
+          line-height: 150%;
+          &:before{
+            font-size: 16px;
+            line-height: 150%;
+          }
+        }
+        &__Text{
+          font-size: 14px;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+}

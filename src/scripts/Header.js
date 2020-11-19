@@ -1,3 +1,5 @@
+// функции для смены номера телефона от города
+
 function waitforCSSisApplied() {
     if (!document.body) {
         return new Promise((res, rej) => {
@@ -78,10 +80,12 @@ function setNewCity(_this){
     setCityWidth();
 }
 
+// Функции адаптивного меню
+
+
+
 
 $(document).ready( function(){
-
-
     sortAndMoveCities();
     waitforCSSisApplied().then(() => {
         setTimeout(function (){
@@ -89,11 +93,39 @@ $(document).ready( function(){
         }, 200);
         setBgGabarites();
     })
-
-
-
-
     $(document).on('click', '.HeaderInfo-City__El:not(.HeaderInfo-City__El_active)', function (){
         setNewCity($(this))
     })
 });
+
+
+function showMobMenu(){
+    compensateBody();
+    $('.Burger').addClass('Burger_active');
+    $('.mobileMenu').addClass('mobileMenu_active');
+}
+function hideMobMenu(){
+    $('.mobileMenu').removeClass('mobileMenu_active');
+    $('.Burger').removeClass('Burger_active');
+    setTimeout(function (){
+        unCompensateBody();
+    }, 300)
+}
+
+$(document).ready(function (){
+    $(document).on('click', '.Burger', function (){
+        if(!$(this).hasClass('Burger_active')){
+            showMobMenu();
+        } else {
+            hideMobMenu();
+        }
+    })
+
+    $(document).on('click', '.mobileMenu', function (){
+        hideMobMenu();
+    })
+
+    $(document).on('click', '.mobileMenu-Wrap', function (e){
+        e.stopPropagation();
+    })
+})

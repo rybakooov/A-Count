@@ -112,7 +112,7 @@ exports.fonts = fonts;
 
 // просто работаем
 gulp.task('default', gulp.series(
-	clean,
+	//clean,
 	gulp.parallel(styles, templates, images, scripts, fonts),
 	gulp.parallel(watch, server)
 ));

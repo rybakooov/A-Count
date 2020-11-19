@@ -66,6 +66,9 @@
     &:not(:last-child){
       margin-bottom: 16px;
     }
+    br{
+      display: none;
+    }
   }
   &:nth-child(2n - 1){
     margin-left: auto;
@@ -102,7 +105,8 @@
 
 
 .FormPopup{
-  width: 600px;
+  width: 648px;
+  padding: 40px 24px;
   &__Title{
     font-weight: 600;
     font-size: 32px;
@@ -141,6 +145,7 @@
 .SuccessForm{
   @extend %grid;
   width: 640px;
+  padding: 40px 24px;
   &__Title{
     grid-area: LT;
     font-weight: 600;
@@ -157,5 +162,155 @@
     margin-top: auto;
     @extend %text;
     color: var(--mid-gray);
+  }
+}
+
+
+
+@media screen and (max-width: 1023px){
+  .Footer{
+    &Main{
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:  'LT RT'
+                            'LB RB';
+      row-gap: 40px;
+    }
+    .Logo{
+      align-self: flex-start;
+    }
+    &Under{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+  }
+  .GeoBlock{
+    width: calc(100% + 24px);
+    margin-left: -24px !important;
+    &:nth-child(2n){
+      grid-area: RT;
+    }
+    &:nth-child(2n+1){
+      grid-area: RB;
+      margin-left: 0;
+    }
+  }
+  .Rights, .Policity, .RybaCode{
+    width: 50%;
+  }
+  .Policity{
+    order: 2;
+    margin-top: 16px;
+  }
+  .RybaCode{
+    margin-left: -12px;
+  }
+
+
+  .FormPopup{
+    .Form-Body-Label{
+      &:nth-child(3){
+        max-width: 100%;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 767px){
+  .Footer{
+    &Main{
+      display: block;
+    }
+    &Under{
+      display: block;
+    }
+  }
+
+  .GeoBlock{
+    margin-left: 0 !important;
+    margin-top: 40px;
+    width: 100% !important;
+    &__Text{
+      br{
+        display: inline;
+      }
+    }
+  }
+
+  .Social{
+    &__Title{
+      display: block;
+      margin-top: 40px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .Rights{
+    width: 100%;
+  }
+  .Policity{
+    width: 100%;
+    display: block;
+  }
+  .RybaCode{
+    width: 100%;
+    display: block;
+    margin-top: 16px;
+    margin-left: 0;
+  }
+
+  .FormPopup{
+    width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    padding: 40px 16px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &__Title{
+      font-size: 24px;
+      line-height: 125%;
+    }
+    &-Row{
+      &-Bot{
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    .Form__Submit{
+      width: 100%;
+    }
+    .Form-Body-CheckboxLabel{
+      margin-left: 0;
+      margin-bottom: 24px;
+    }
+  }
+  .SuccessForm{
+    display: flex;
+    flex-direction: column;
+    height: calc(var(--vh, 1vh) * 100);
+    padding: 40px 16px 24px;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0;
+    &__Img{
+      order: 2;
+      width: 100%;
+    }
+    &__Title{
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 125%;
+      margin-bottom: 16px;
+    }
+    &__Text{
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
   }
 }

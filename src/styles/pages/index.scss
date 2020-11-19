@@ -269,6 +269,9 @@
   }
   &-Quiz{
     grid-area: R;
+    &-Control{
+      display: none;
+    }
     &-Question{
       position: relative;
       &:first-child .Price-Quiz-Answers{
@@ -317,40 +320,6 @@
           }
           &-Answers{
             //display: flex;
-          }
-        }
-      }
-      &_complete{
-        .Price-Quiz{
-          &-Question{
-            &__Title{
-              color: var(--mid-gray);
-              &:before{
-                background-color: var(--light-purple);
-              }
-            }
-          }
-          &-Answers{
-            //display: flex;
-            input:not(:checked) + .Price-Quiz-Answers-Label{
-              display: none;
-            }
-            input:checked + .Price-Quiz-Answers-Label{
-              display: flex;
-            }
-            &-Label{
-              &__Flag{
-                &:after{
-                  background-color: var(--light-purple);
-                }
-              }
-              &__Value{
-                color: var(--mid-gray);
-              }
-            }
-            &__Change{
-              display: block;
-            }
           }
         }
       }
@@ -505,6 +474,7 @@
     &_second{
       .Whom-List__Item{
         p{
+          width: 100%;
           &:nth-child(even){
             transform: translateX(100%);
             opacity: 0;
@@ -519,6 +489,9 @@
     &-Switch{
       margin-bottom: 40px;
       @extend %big-text;
+      br{
+        display: none;
+      }
       &__Btn{
         @extend %tabBtn;
         &_active{
@@ -767,5 +740,595 @@
     grid-area: LB;
     margin-top: auto;
     margin-left: -23px;
+  }
+}
+
+
+@media screen and (max-width: 1366px) {
+  .Price-Quiz-Question__Title:before{
+    margin-right: 8px;
+  }
+  .Price-Quiz-Answers{
+    padding-left: 24px;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .Services{
+    .container {
+      display: block;
+    }
+    &Item{
+      &:after{
+        left: -24px;
+        width: calc(100% + 48px);
+      }
+    }
+    &__Img{
+      display: none;
+    }
+  }
+  .Price {
+    &-Head{
+      margin-bottom: 64px;
+    }
+    .container {
+      display: block;
+    }
+    &-Quiz-Answers-Label:not(:last-child){
+      margin-right: 0;
+    }
+    &-Quiz-Answers-Label:not(:nth-child(2)){
+      margin-left: 24px;
+    }
+    &-Result{
+      &__Show{
+        margin-top: 48px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1023px){
+  .Banner{
+    padding: 40px 0 80px;
+    .container{
+      display: flex;
+      flex-direction: column-reverse;
+      height: auto;
+      align-items: flex-start;
+    }
+    &-Img{
+      margin-left: 0;
+      max-width: 560px;
+      margin-bottom: 40px;
+      width: 100%;
+    }
+    &-Desc{
+      &__Text{
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .About{
+    .container{
+      display: block;
+      position: relative;
+    }
+    &-Desc{
+      margin-bottom: 64px;
+      &__Title{
+        max-width: 100%;
+      }
+      &__Text{
+        max-width: 600px;
+      }
+    }
+    &-Items{
+      margin: -32px -12px;
+      width: calc(100% + 24px);
+    }
+    &Item{
+      margin: 32px 12px;
+      width: calc(50% - 24px);
+    }
+    &-Video{
+      position: absolute;
+      right: 40px;
+      top: -5px;
+      &__Text{
+        display: none;
+      }
+    }
+  }
+
+  .Services{
+    &__Title{
+      margin-bottom: 40px;
+    }
+  }
+
+  .Price-Head__Text{
+    max-width: 370px;
+    span br{
+      display: none;
+    }
+  }
+
+  .Whom{
+    .container{
+      display: block;
+    }
+    &__Img{
+      display: none;
+    }
+    &-Head{
+      margin-bottom: 64px;
+    }
+    &-List__Item{
+      max-width: 100%;
+    }
+  }
+
+  .Form{
+    .container{
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    &-Body{
+      order: 2;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      &-Label{
+        max-width: calc(50% - 12px);
+        width: 100%;
+        input{
+          max-width: 100%;
+        }
+        &:nth-child(odd){
+          margin-right: 24px;
+        }
+        &:nth-child(5){
+          max-width: 100%;
+          margin-right: 0;
+        }
+      }
+      &-CheckboxLabel{
+        order: 2;
+        margin-bottom: 0;
+        margin-left: 24px;
+      }
+    }
+    &__Img{
+      max-width: 400px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 767px){
+  .Banner{
+    padding: 40px 0;
+    &-Img{
+      max-width: 280px;
+      margin-right: 0;
+      margin-bottom: 32px;
+    }
+    &-Desc{
+      margin-right: 0;
+      &__Title{
+        margin-bottom: 16px;
+      }
+      &__Text{
+        font-size: 14px;
+        line-height: 150%;
+        margin-bottom: 32px;
+      }
+      &-Buttons{
+        &__About, &__Rates{
+          padding-left: 0;
+          flex: 1;
+          padding-right: 0;
+          text-align: center;
+        }
+        &__About{
+          margin-left: 20px;  
+        }
+      }
+    }
+  }
+
+  .About{
+    &-Desc{
+      &__Title{
+        margin-bottom: 16px;
+      }
+      &__Text{
+        font-size: 14px;
+        line-height: 150%;
+        margin-bottom: 64px;
+      }
+    }
+    &-Items{
+      width: 100%;
+      margin: 0;
+    }
+    &Item{
+      margin: 0;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      img{
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        margin-right: 16px;
+      }
+      &__Text{
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 150%;
+      }
+      &__Title{
+        margin: 0;
+        font-size: 16px;
+        line-height: 150%;
+        width: calc(100% - 48px - 16px);
+      }
+      &:not(:last-child){
+        margin-bottom: 64px;
+      }
+    }
+    &-Video{
+      position: static;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      margin-top: 64px;
+      &__Text{
+        display: block;
+        margin-top: 16px;
+      }
+    }
+  }
+
+  .Services{
+    padding: 64px 0;
+    .container{
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    &__Title{
+      margin-bottom: 40px;
+    }
+    &-List{
+      order: 2;
+    }
+    &Item{
+      &-Head{
+        padding: 24px 8px;
+        &__Title{
+          font-size: 16px;
+          line-height: 150%;
+          padding-right: 16px;
+          br{
+            display: none;
+          }
+        }
+      }
+      &_active{
+        margin-bottom: 24px;
+      }
+      &-Body{
+        font-size: 14px;
+        line-height: 150%;
+        padding: 0 8px;
+      }
+      &:after{
+        width: calc(100% + 16px);
+        left: -8px;
+      }
+    }
+    &__Img{
+      display: block;
+      max-width: 280px;
+      margin-bottom: 0;
+    }
+    &__Link{
+      margin-top: 40px;
+    }
+  }
+
+  .Price{
+    &-Head{
+      margin-bottom: 40px;
+      &__Title{
+        margin-bottom: 16px;
+      }
+      &__Text{
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
+    &-Result__Show{
+      margin-top: 32px;
+    }
+    &-Result-Item{
+      padding: 24px 16px;
+      margin: 0 -8px;
+      &-Head{
+        &__Rate{
+          font-size: 18px;
+        }
+        &__Price{
+          font-size: 16px;
+        }
+      }
+      &__Desc{
+        font-size: 14px;
+      }
+    }
+    &-Quiz{
+      padding: 24px 16px;
+      border: 1px dashed #D6D6D6;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 0 -8px;
+      &-Control{
+        display: flex;
+        margin-bottom: 24px;
+        align-items: center;
+        &__State{
+          color: var(--mid-light-gray);
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 150%;
+          margin: 0 16px;
+          &_cur{
+            color: var(--cherry);
+          }
+          &_all{
+            color: var(--mid-light-gray);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+          }
+        }
+        &__Prev{
+          width: 24px;
+          height: 24px;
+          border: none;
+          background-color: var(--about-white);
+          border-radius: 50%;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transform: rotate(90deg);
+          transition: .3s;
+          display: none;
+        }
+      }
+      &-Wrap{
+        display: flex;
+        transition: .3s;
+        align-items: flex-start;
+        margin: 0 -12px;
+      }
+      &-Question{
+        //display: none;
+        flex: 1;
+        //position: absolute;
+        flex-shrink: 0;
+        margin: 0 12px;
+        &:not(:last-child){
+          padding-bottom: 0;
+          &:before {
+            display: none;
+          }
+        }
+        &__Title{
+          font-size: 16px;
+          line-height: 150%;
+          color: var(--black);
+          &:before{
+            display: none;
+          }
+        }
+        &_current{
+          display: block;
+          & ~ .Price-Quiz-Question{
+            //display: none !important; 
+          }
+        }
+        &_complete:last-child{
+          display: block;
+        }
+        &:first-child .Price-Quiz-Answers{
+          display: grid;
+        }
+      }
+      &-Answers{
+        padding-left: 0;
+        flex-wrap: wrap;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        &-Label{
+          display: flex !important;
+          &:not(:nth-child(2)){
+            margin-left: 0;
+          }
+        }
+        &__Change{
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  .Whom{
+    padding: 64px 0;
+    .container{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+    }
+    &-Head{
+      margin-bottom: 40px;
+      &__Text{
+        font-size: 14px;
+        line-height: 150%;
+      }
+      &__Title{
+        margin-bottom: 16px;
+      }
+    }
+    &-List{
+      order: 2;
+      &-Switch{
+        margin-bottom: 24px;
+        font-size: 16px;
+        line-height: 150%;
+        br{
+          display: inline;
+        }
+      }
+      &__Item{
+        transition: .3s;
+        p{
+          width: 100%;
+        }
+      }
+    }
+    &__Img{
+      display: block;
+      margin-bottom: 40px;
+      max-width: 160px;
+    }
+  }
+
+  .Cases{
+    &__Subtitle{
+      font-size: 14px;
+      line-height: 150%;
+      max-width: 182px;
+    }
+    &-Slider{
+      .slick-list{
+        margin: 0;
+      }
+      &-Item{
+        width: 304px !important;
+        margin: 0 8px;
+        padding: 24px 16px;
+        &-Head{
+          &-imgbox{
+            width: 48px;
+            height: 48px;
+          }
+          &-Info{
+            &__Name{
+              font-size: 16px;
+              line-height: 150%;
+            }
+            &__Where{
+              
+            }
+          }
+        }
+        &__Body{
+          font-size: 14px;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+
+  .Form{
+    &-Head{
+      &__Text{
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
+    &__Img{
+      max-width: 240px;
+      margin-left: 0;
+    }
+    &-Body{
+      &-Label{
+        max-width: 100%;
+        margin-right: 0 !important;
+        width: 100% !important;
+        margin-bottom: 24px;
+      }
+      &-CheckboxLabel{
+        margin-left: 0;
+        margin-top: 16px;
+        margin-bottom: 24px;
+        width: 100%;
+      }
+    }
+    &__Submit{
+      order: 3;
+    }
+  }
+}
+
+
+@media screen and (min-width: 768px){
+  .Price-Quiz-Wrap{
+    width: auto !important;
+    height: auto !important;
+    transform: none !important;
+  }
+
+  .Price-Quiz-Question_complete{
+    .Price-Quiz{
+      &-Question{
+        &__Title{
+          color: var(--mid-gray);
+          &:before{
+            background-color: var(--light-purple);
+          }
+        }
+      }
+      &-Answers{
+        //! min-widthL 767
+        display: flex !important;
+        input:not(:checked) + .Price-Quiz-Answers-Label{
+          display: none;
+        }
+        input:checked + .Price-Quiz-Answers-Label{
+          display: flex;
+        }
+        &-Label{
+          &__Flag{
+            &:after{
+              background-color: var(--light-purple);
+            }
+          }
+          &__Value{
+            color: var(--mid-gray);
+          }
+        }
+      }
+    }
+    .Price-Quiz-Answers{
+      display: flex !important;
+      &__Change{
+        display: block !important;
+      }
+    }
   }
 }

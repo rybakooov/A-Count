@@ -118,19 +118,26 @@ function cleanForm(form){
 
 
 
+
+
 function submitForm(elem, event){
     event.preventDefault();
     let form = $(elem).closest('form');
     checkForm(form);
     if (Validation(form)) {
         if(form.hasClass('FormPopup')){
-
             $('.FormPopup').showPopup('hide');
             setTimeout(function (){
                 $('.SuccessForm').showPopup('show');
+                setTimeout(function (){
+                    $('.SuccessForm').showPopup('hide');
+                }, 2000)
             }, 500)
         } else {
             $('.SuccessForm').showPopup('show');
+            setTimeout(function (){
+                $('.SuccessForm').showPopup('hide');
+            }, 2000)
         }
         cleanForm(form);
     }

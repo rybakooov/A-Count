@@ -23,6 +23,7 @@ $(document).ready( function(){
         }
     })
 
+
     const all = {
         titleList: ['Старт', 'Комфорт', 'Развитие', 'Стабильность', 'Надёжность', 'Перспектива'],
         tables: [{
@@ -64,18 +65,23 @@ $(document).ready( function(){
     const entryEl = $('.PriceTable .container');
 
     function CreateTable(_data){
+        entryEl.append(`<div class="PriceTable-Item">
+                            <Aside class="PriceTable-Aside">
+                            </Aside>
+                            <section class="PriceTable-Content">
+                            <div></div>
+                            </section>
+                        </div>`);
         for(let TABLE in _data.tables){
-            entryEl.append(`<div class="PriceTable-Item" data-table="${TABLE}">
-                                <Aside class="PriceTable-Aside">
-                                    <p class="PriceTable-Aside__Head">${_data.tables[TABLE].title}</p>
-                                </Aside>
-                                <section class="PriceTable-Content">
-                                    <div class="PriceTable-Content-HeadRow"></div>
-                                </section>
-                            </div>`);
-            let asideEl = $(`.PriceTable-Item[data-table="${TABLE}"] .PriceTable-Aside`);
-            let contentEl = $(`.PriceTable-Item[data-table="${TABLE}"] .PriceTable-Content`);
-            if(TABLE == 0){
+            let asideEl = $(`.PriceTable-Item .PriceTable-Aside`);
+            let contentEl = $(`.PriceTable-Item .PriceTable-Content > div`);
+            asideEl.append(`<p class="PriceTable-Aside__Head">${_data.tables[TABLE].title}</p>`)
+            contentEl.append(`<div class="PriceTable-Content-HeadRow"></div>`);
+            contentEl.width(_data.titleList.length * 122);
+            if(TABLE === '0'){
+                for(let HeadingTitles in _data.titleList){
+                    entryEl.find('.PriceTable-Content-HeadRow').append(`<p class="PriceTable-Content-HeadRow__El">${_data.titleList[HeadingTitles]}</p>`);
+                }
             }
             for(let RowTitle in _data.tables[TABLE].rows){
 
@@ -92,13 +98,59 @@ $(document).ready( function(){
                 }
             }
         }
-
-        entryEl.prepend(`<div class="PriceTable-Heading"><div class="PriceTable-Heading-Right"></div></div>`)
+        entryEl.prepend(`
+            <div class="PriceTable-Heading">
+                <button class="PriceTable-Heading__Prev">
+                    <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.33333 1L1 6.33333L6.33333 11.6667" stroke="#B5076B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="PriceTable-Heading-Right"></div>
+                <button class="PriceTable-Heading__Next">
+                    <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.33333 1L1 6.33333L6.33333 11.6667" stroke="#B5076B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>`)
         for(let HeadingTitles in _data.titleList){
             entryEl.find('.PriceTable-Heading-Right').append(`<p class="PriceTable-Heading-Right__El">${_data.titleList[HeadingTitles]}</p>`);
         }
     }
 
     CreateTable(all);
+
+
+
+    $(document).on('click', '.PriceTable-Heading__Prev', function(){
+        if( $('.PriceTable-Heading-Right__El').is(':animated') ) {
+            return false;
+        }
+
+        let currentIndex = $('.PriceTable-Heading-Right__El:visible').index();
+
+        if(currentIndex == 0) {return false};
+
+        $(`.PriceTable-Heading-Right__El:nth-child(${currentIndex + 1})`).fadeOut(200);
+        $(`.PriceTable-Content-Row__El:nth-child(${currentIndex + 1})`).fadeOut(200);
+        setTimeout(function(){
+            $(`.PriceTable-Heading-Right__El:nth-child(${currentIndex})`).fadeIn();
+            $(`.PriceTable-Content-Row__El:nth-child(${currentIndex})`).fadeIn().css('display', 'flex');
+        }, 200)
+    })
+    $(document).on('click', '.PriceTable-Heading__Next', function(){
+        if( $('.PriceTable-Heading-Right__El').is(':animated') ) {
+            return false;
+        }
+        let currentIndex = $('.PriceTable-Heading-Right__El:visible').index();
+
+        if(currentIndex == $('.PriceTable-Heading-Right__El').length - 1) {return false};
+
+        $(`.PriceTable-Heading-Right__El:nth-child(${currentIndex + 1})`).fadeOut(200);
+        $(`.PriceTable-Content-Row__El:nth-child(${currentIndex + 1})`).fadeOut(200);
+        setTimeout(function(){
+            $(`.PriceTable-Heading-Right__El:nth-child(${currentIndex + 2})`).fadeIn();
+            $(`.PriceTable-Content-Row__El:nth-child(${currentIndex + 2})`).fadeIn().css('display', 'flex');
+        }, 200)
+    })
 });
 //! PRICE PAGE END

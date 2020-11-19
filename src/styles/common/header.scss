@@ -28,9 +28,6 @@
         .HeaderInfo-City__El{
           opacity: 1;
           pointer-events: all;
-          &_active{
-            color: var(--purple);
-          }
         }
         svg{
           transform: translateY(-50%) rotate(180deg);
@@ -67,6 +64,11 @@
         opacity: 0;
         pointer-events: none;
         top: 0;
+        &:hover{
+          @media screen and (min-width: 1024px) {
+            color: var(--purple);
+          }
+        }
         &_active{
           top: 0 !important;
           opacity: 1;
@@ -150,8 +152,186 @@
   }
 }
 
-.CallOrder{
+.Header .CallOrder{
   @extend %black-btn;
   margin-left: 24px;
   align-self: center;
+  svg{
+    display: none;
+  }
+}
+
+.Burger{
+  display: none;
+}
+
+.mobileMenu{
+  display: none;
+  .CallOrder{
+    @extend %cherry-btn;
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .Burger{
+    display: block;
+    padding: 12px;
+    margin-right: -12px;
+    margin-left: 12px;
+    background: transparent;
+    border: none;
+    align-self: center;
+    cursor: pointer;
+    overflow: hidden;
+    span{
+      display: block;
+      width: 24px;
+      height: 2px;
+      border-radius: 1px;
+      background: #0F0F0F;
+      transition: .3s;
+      &:not(:last-child){
+        margin-bottom: 6px;
+      }
+    }
+    &_active{
+      span{
+        &:nth-child(1){
+          transform: translateY(8px) rotate(45deg);
+        }
+        &:nth-child(2){
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        &:nth-child(3){
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .Header .CallOrder{
+    margin-left: auto;
+  }
+
+  .Header{
+    height: 56px;
+    &Info{
+      display: none;
+    }
+    .Nav{
+      display: none;
+    }
+  }
+
+  .mobileMenu{
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    pointer-events: none;
+    overflow: hidden;
+    transition: .3s;
+    &_active{
+      pointer-events: all;
+      background-color: rgba(0, 0, 0, 0.2);
+      .mobileMenu-Wrap{
+        transform: none;
+      }
+    }
+    &-Wrap{
+      width: 100%;
+      max-width: 360px;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 8px rgba(181, 7, 107, 0.05), inset 0px 4px 8px rgba(181, 7, 107, 0.05);;
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: .3s;
+    }
+    .Nav{
+      display: block;
+      padding: 24px 24px;
+      margin-left: 0;
+      &__Link{
+        a{
+          padding: 16px 0;
+          width: 100%;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 150%;
+        }
+        &:not(:last-child){
+          margin-right: 0;
+        }
+      }
+    }
+    &-Phones{
+      margin-top: auto;
+      background-color: #F5F7FA;
+      padding: 24px;
+      &__Item{
+        display: flex;
+        &:not(:first-child){
+          margin-top: 16px;
+        }
+        justify-content: space-between;
+        p, a{
+          display: block;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 115%;
+          color: var(--black);
+        }
+        a{
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px){
+  .Burger{
+    margin-left: 8px;
+  }
+
+  .Header {
+    height: 52px;
+    .Logo{
+      img {
+        height: 20px;
+      }
+    }
+    .CallOrder {
+      padding: 12px;
+      border: none;
+      p {
+        display: none;
+      }
+      svg {
+        display: block;
+      }
+    }
+  }
+
+  .mobileMenu {
+    top: 52px;
+    .Nav__Link{
+      &:not(:last-child){
+        border-bottom: 1px solid #F7F7F7;
+      }
+    }
+    &-Wrap {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
 }

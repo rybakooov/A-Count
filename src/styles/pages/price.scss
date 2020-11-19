@@ -39,7 +39,7 @@
     }
     &:not(:nth-child(2)){
       .PriceTable-Content-HeadRow{
-        border-bottom: 1px solid var(--mid-light-gray);
+        //border-bottom: 1px solid var(--mid-light-gray);
       }
     }
   }
@@ -54,6 +54,9 @@
       padding-bottom: 24px;
       padding-top: 24px;
       border-bottom: 1px solid var(--mid-light-gray);
+      &:not(:first-child){
+        margin-top: 48px;
+      }
     }
     &__El{
       height: 70px;
@@ -87,6 +90,8 @@
     &-HeadRow{
       height: 73px;
       &:not(:first-child){
+        border-bottom: 1px solid var(--mid-light-gray);
+        margin-top: 48px;
       }
     }
     &-Row{
@@ -116,6 +121,9 @@
     gap: 16px;
     position: sticky;
     top: 68px;
+    &__Prev, &__Next{
+      display: none;
+    }
     &-Right{
       grid-area: R;
       display: flex;
@@ -171,10 +179,198 @@
       color: var(--mid-gray);
       svg{
         margin-right: 8px;
+        path{
+          transition: .3s;
+          &:nth-child(1){
+            fill: #fff;
+          }
+        }
       }
       span{
         color: var(--cherry);
       }
+      &:hover svg path:nth-child(1){
+        @media screen and (min-width: 1024px){
+          fill: var(--cherry);
+        }
+      }
+      &:hover svg path:nth-child(2), &:hover svg path:nth-child(3){
+        @media screen and (min-width: 1024px){
+          stroke: #fff;
+        }
+      }
     }
   }
 }
+
+
+@media screen and (max-width: 1100px){
+  .Price{
+    &Head{
+      padding: 80px 0;
+    }
+  }
+  .PriceTable{
+    &-Item{
+      display: flex;
+      gap: 0;
+    }
+    &-Aside{
+      width: 280px;
+      //margin-right: 20px;
+      flex-shrink: 0;
+      &__Head{
+        top: 56px;
+      }
+      position: relative;
+      padding-right: 20px;
+      &:after{
+        position: absolute;
+        left: calc(100%);
+        width: 46px;
+        top: -16px;
+        height: calc(100% + 56px);
+        content: '';
+        display: block;
+        background: linear-gradient(90deg, #DFE2E8 0%, rgba(245, 247, 250, 0) 100%);
+      }
+    }
+    &-Content{
+      padding-left: 40px;
+      overflow: auto;
+      margin-right: -40px;
+      //position: relative;
+      &-Row__El{
+        width: 106px;
+        flex-shrink: 0;
+        flex: none;
+      }
+      &-HeadRow{
+        &__El{
+          width: 106px;
+          flex-shrink: 0;
+          flex: none;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 150%;
+          color: var(--purple);
+        }
+      }
+    }
+    &-Item:nth-child(2){
+      margin-top: 0;
+    }
+    &-Heading{
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: 1101px){
+  .PriceTable-Content > div{
+    width: auto !important;
+  }
+}
+@media screen and (max-width: 1023px){
+  .PriceDownload{
+    display: none;
+  }
+}
+@media screen and (max-width: 767px){
+  .PriceTable{
+    padding-top: 0;
+    &-Content{
+      position: absolute;
+      padding-left: 0;
+      margin: 0;
+      right: 0;
+      width: 100%;
+      & > div{
+        width: 100% !important;
+      }
+      &-HeadRow{
+        &__El{
+          display: none;
+        }
+        &:not(:first-child){
+          margin-top: 24px;
+          border-bottom: none;
+        }
+      }
+      &-Row{
+        &__El{
+          display: none;
+          margin-right: 16px !important;
+          flex: 1;
+          width: auto;
+          margin-left: 16px;
+          justify-content: flex-end;
+          &:nth-child(1){
+            display: flex;
+          }
+        }
+      }
+    }
+    &-Aside{
+      width: 100%;
+      padding-right: 0;
+      &__Head{
+        top: 109px;
+        z-index: 2;
+        &:not(:first-child){
+          margin-top: 24px;
+        }
+      }
+      &:after{
+        display: none;
+      }
+    }
+    &-Heading{
+      margin-bottom: 16px;
+      position: sticky;
+      top: 52px;
+      display: flex;
+      gap: 0;
+      background-color: #fff;
+      margin: 0 -16px;
+      padding: 16px;
+      justify-content: space-between;
+      border-top: 1px solid var(--mid-light-gray);
+      z-index: 4;
+      &__Prev, &__Next{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border: 1px solid var(--cherry);
+        border-radius: 50%;
+        background-color: transparent;
+      }
+      &__Next{
+        transform: rotate(180deg);
+      }
+      &-Right{
+        background: none;
+        &__El{
+          display: none;
+          margin: 0 !important;
+          padding: 0;
+          border: none;
+          color: var(--cherry);
+          &:nth-child(1){
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 768px){
+  .PriceTable-Content-Row__El, .PriceTable-Heading-Right__El{
+    display: flex !important;
+  }
+}
+
