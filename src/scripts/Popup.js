@@ -73,9 +73,9 @@
                 });
             }
 
-            $(window).on('resize', function(){
+            /*$(window).on('resize', function(){
                 _this.hide();
-            })
+            })*/
 
             return this;
 
