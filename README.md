@@ -20,7 +20,7 @@ The old website of the company was created 7 years ago and needed to be reworked
  (http://k50.ru/img/logos/logo_on_red.png)
 ![alt text](https://mir-s3-cdn-cf.behance.net/project_modules/fs/d5a0e2111506633.6003240eef183.png "Frame - 1 | A-Count")
 ![alt text](https://mir-s3-cdn-cf.behance.net/project_modules/fs/5a7a60111506633.6003240eee476.png "Frame - 2 | A-Count")
-![alt text](https://mir-s3-cdn-cf.behance.net/project_modules/fs/5a7a60111506633.6003240eee476.png "Frame - 3 | A-Count")
+![alt text](https://mir-s3-cdn-cf.behance.net/project_modules/fs/4fd94e111506633.6003240eec9db.png "Frame - 3 | A-Count")
 ![alt text](https://mir-s3-cdn-cf.behance.net/project_modules/fs/4d23b0111506633.6003240eec55c.png "Frame - 4 | A-Count")
 ![alt text](https://mir-s3-cdn-cf.behance.net/project_modules/fs/3db29d111506633.6003240eee99e.png "Frame - 5 | A-Count")
 ![alt text](https://mir-s3-cdn-cf.behance.net/project_modules/fs/b805af111506633.6003240eef5ea.png "Frame - 6 | A-Count")
