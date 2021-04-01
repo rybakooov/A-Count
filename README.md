@@ -17,6 +17,7 @@ The old website of the company was created 7 years ago and needed to be reworked
 [Site here](https://a-count.net/)
 
 ### Behance Case ⬇
+[Behance here](https://www.behance.net/gallery/111506633/A-Count-website-redesign)
 ![alt text](https://mir-s3-cdn-cf.behance.net/project_modules/fs/d5a0e2111506633.6003240eef183.png "Frame - 1 | A-Count")
 ![alt text](https://mir-s3-cdn-cf.behance.net/project_modules/fs/5a7a60111506633.6003240eee476.png "Frame - 2 | A-Count")
 ![alt text](https://mir-s3-cdn-cf.behance.net/project_modules/fs/4fd94e111506633.6003240eec9db.png "Frame - 3 | A-Count")
