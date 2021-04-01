@@ -6,7 +6,7 @@ The old website of the company was created 7 years ago and needed to be reworked
 
 ### Structure
 | Home            | Price  | Cases       | Services        | Accounting     | Blog         | Contacts  |
-| --------------- |:------:| -----------:| --------------- |:--------------:| ------------:| --------- |
+| --------------- | ------ | ----------- | --------------- | -------------- | ------------ | --------- |
 | • Hero          |• Price |• Case list  |• Service list   |• Details       |• Subscription| • Phone   |
 | • About         |• Quiz  |• Case detail|• Service detail |• Manager       |• Articles    | • Adress  |
 | • Services      |        |             |• Contact form   |• Stages of work|              | • E-mail  |
