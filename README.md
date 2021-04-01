@@ -14,4 +14,4 @@ The old website of the company was created 7 years ago and needed to be reworked
 | • Cases         |        |             |                 |• Contact form  |              |  |
 | • Contact form  |        |             |                 |                |              |  |
 
-[Click here](https://rybakooov.github.io/a-count/current/)
+[Click here](https://a-count.net/)
