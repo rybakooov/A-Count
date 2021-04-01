@@ -1,4 +1,4 @@
-# A-Count
+# A-Count💻📈
 Redesign of the corporate website of a b2b company that provides remote accounting, assistance in law and personnel matters, as well as solving problems in related areas.
 
 ## About the project
